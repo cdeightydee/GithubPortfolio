@@ -292,7 +292,7 @@ th {
     }
 
     .table {
-        border-collapse: collapse !important
+        border-collapse: collapse; !important
         float: left; /* Float tables side by side */
         margin-right: 10px; /* Add space between tables */
     }
