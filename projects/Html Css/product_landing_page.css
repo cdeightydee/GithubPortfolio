@@ -1,226 +1,249 @@
-:root{
-    --white: hsl(0, 0%, 100%);
-    --text: hsl(228, 12%, 48%);
-    --pale: hsl(32, 37%, 92%);
-    --green: hsl(158, 36%, 37%);
-    --header-text: hsl(212, 21%, 14%);
-  }
-  
-  * {
-    margin: 0;
-  }
-  body {
-    background-color: var(--pale);
-  }
-  
-  #header-img {
-    width: 60px;
-    object-fit: contain;
-  }
-  
-  #nav-bar {
-    display: flex;
-    flex-direction: column;
-    justify-content: relative;
-    align-items: center; 
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background-color: var(--white);
-    padding: 10px;
-  }
-  
-  .nav-links {
-    display: flex;
-    list-style: none;
-  }
-  .nav-links a {
-    text-decoration: none;
-    color: var(--text);
-    padding: 0 10px;
-  }
-  
-  .logo-container {
-     display: flex;
-     align-items: center;
-  }
-  
-  .the-product {
-    font-size: 36px;
-    margin-left:1px;
-    padding: 5px;
-    font-weight: 700;
-    font-family: arial;
-  }
-  
-  }
-  #email-section {
-    margin-top: 100px;
-  }
-  
-  .input {
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid var(--green);
-  }
-  
-  #submit {
-    background-color: var(--green);
-    color: var(--white);
-    cursor: pointer;
-  }
-  
-  section::before {
-    display: block;
-    content: " ";
-    margin-top: -150px;
-    height: 250px;
-    visibility: hidden;
-    pointer-events: none;
-  }
-  
-  section {
-    margin: 40px 20px;
-    text-align: center;
-  }
-  h2 {
-   font-family: arial; 
-   margin-bottom: 10px;
-  }
-  
-  .icon {
-   color: var(--green); 
-   margin-right: 30px;
-   } 
-  
-  #feature {
-    text-align: left;
-    max-width: 800px;
-    margin: auto;
-  
-  }
-  
-  .feature {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
-    font-family: arial;
-  }
-  
-  #video {
-    width: 100%;
-  }
-  .product-image {
-   width: 100%;
-   margin: auto;
-   height: 500px;
-   border: 1px solid var(--text);
-   border-radius: 10px 10px 0 0;  
-   background-repeat: no-repeat;
-   background-size: cover;
-  }
-  .product1 {
-    background-image: url(https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR42J-li-TIq8S57qDcgJoz1WYGwQQjK5lYPhQsxWWGDWRaWh5iy5gdFCMeOBJIGdPDEHGgyEdG2xbIkxOV-aH0y9NYmSeHLiG0VxWa9VM&usqp=CAE);
-  }
-  .product2 {
-    background-image: url(https://m.media-amazon.com/images/I/81Q4I3eCYSL._SL1296_.jpg);
-  }
-  .product3 {
+:root {
+  --white: hsl(0, 0%, 100%);
+  --text: hsl(228, 12%, 48%);
+  --pale: hsl(32, 37%, 92%);
+  --green: hsl(158, 36%, 37%);
+  --header-text: hsl(212, 21%, 14%);
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: var(--pale);
+}
+
+#header-img {
+  width: 60px;
+  object-fit: contain;
+}
+
+#nav-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: relative;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background-color: var(--white);
+  padding: 10px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 0 10px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.the-product {
+  font-size: 36px;
+  margin-left: 1px;
+  padding: 5px;
+  font-weight: 700;
+  font-family: arial;
+}
+
+
+#email-section {
+  margin-top: 100px;
+}
+
+.input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid var(--green);
+}
+
+#submit {
+  background-color: var(--green);
+  color: var(--white);
+  cursor: pointer;
+}
+
+section::before {
+  display: block;
+  content: " ";
+  margin-top: -150px;
+  height: 250px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+section {
+  margin: 40px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-family: arial;
+  margin-bottom: 10px;
+}
+
+.icon {
+  color: var(--green);
+  margin-right: 30px;
+}
+
+#feature {
+  text-align: left;
+  max-width: 800px;
+  margin: auto;
+
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  font-family: arial;
+}
+
+#video {
+  width: 100%;
+}
+
+.product-image {
+  width: 100%;
+  margin: auto;
+  height: 500px;
+  border: 1px solid var(--text);
+  border-radius: 10px 10px 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.product1 {
+  background-image: url(https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR42J-li-TIq8S57qDcgJoz1WYGwQQjK5lYPhQsxWWGDWRaWh5iy5gdFCMeOBJIGdPDEHGgyEdG2xbIkxOV-aH0y9NYmSeHLiG0VxWa9VM&usqp=CAE);
+}
+
+.product2 {
+  background-image: url(https://m.media-amazon.com/images/I/81Q4I3eCYSL._SL1296_.jpg);
+}
+
+.product3 {
   background-image: url(https://m.media-amazon.com/images/I/91nQElamq0L._SL1500_.jpg)
-  }
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 10px;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.inner-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.content {
+  font-family: arial;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.main-price {
+  margin-right: 20px;
+  font-size: 30px;
+  font-family: arial;
+  color: var(--green);
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: var(--text);
+}
+
+.author {
+  font-family: arial;
+  letter-spacing: 5px;
+  color: var(--text);
+  text-transform: uppercase;
+}
+
+.header {
+  font-family: arial;
+  margin: 10px 0;
+  color: var(--header-text);
+}
+
+.add {
+  background-color: var(--green);
+  cursor: pointer;
+  padding: 15px;
+  border: none;
+  border-radius: none;
+  width: 100%;
+  color: var(--white);
+  font-family: arial;
+  font-weight: 700;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+  flex-direction: row;
+}
+
+@media only screen and (450px < width) < 600px) {
   .card {
-    background-color: var(--white);
-    border-radius: 10px;
-    width: 90%;
-    margin: auto;
-    margin-bottom: 10px;
+    font-size: 0.85rem;
   }
+
+  .product-image {
+    height: 400px;
+  }
+
+}
+
+@media only screen and (450px <=width) {
+  .card {
+
+    max-width: 525px;
+  }
+
   .inner-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 10px;
+    width: 300px;
+    padding: 20px;
   }
-  .content {
-    font-family: arial;
-    color: var(--text);
-    margin-bottom: 10px;
-    }
-  
-  .flex {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+}
+
+.product-image {
+  width: 400px;
+  border-radius: 10px 0 0 10px;
+}
+
+@media only screen and (width >=1000px) {
+  #video {
+    width: 70px;
   }
-  .main-price {
-    margin-right: 20px;
-    font-size: 30px;
-    font-family: arial;
-    color: var(--green);
-    }
-  .old-price {
-      text-decoration: line-through;
-      color: var(--text);
-    }
-  .author {
-    font-family: arial;
-    letter-spacing: 5px;
-    color: var(--text);
-    text-transform: uppercase;
-    }
-    .header {
-      font-family: arial;
-      margin: 10px 0;
-      color: var(--header-text);
-    }
-  .add {
-    background-color: var(--green);
-    cursor: pointer;
-    padding: 15px;
-    border: none;
-    border-radius: none;
-    width: 100%;
-    color: var(--white);
-    font-family: arial;
-    font-weight: 700;
+
+  .product-cards {
     display: flex;
-    margin-bottom: 10px;
-  }
-  @media only screen and (min-width: 600px) {
     flex-direction: row;
+    flex-wrap: wrap;
   }
-  @media only screen and (450px < width) < 600px) {
-    .card {
-      font-size: 0.85rem;
-    }
-    .product-image {
-     height: 400px;  
-    }
-   
-  }
-  @media only screen and (450px <= width) {
-    .card {
-  
-      max-width: 525px;
-    }
-    .inner-card {
-      width: 300px;
-      padding: 20px;
-    }
-      }
-    .product-image {
-     width: 400px;  
-     border-radius: 10px 0 0 10px;
-    }
-    @media only screen and (width >= 1000px) {
-      #video {
-        width: 70px;
-      }
-      .product-cards{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-    }
-  }
+}
+}
