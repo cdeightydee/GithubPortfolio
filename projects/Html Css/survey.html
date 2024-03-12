@@ -1,89 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Pet Survey</title>
-      <link href="./projects/Html Css/tribute_page.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-    <h1 id="title">Pet Survey</h1>
-    <p id="description">Please fill out this form with the required information</p>
-    <form id="survey-form" method="post" action='https://register-demo.freecodecamp.org'>
-      <fieldset>
-        <label id="name-label" for="name">Enter Your Full Name:
-          <input id="name" name="name" type="text" placeholder="John Smith" required /></label>
-        <br>
-        <label id="number-label" for="age">Input your age (years):
-          <input id="number" type="number" name="age" min="13" max="120" placeholder="13" /></label>
-        <br>
-        <label id="email-label" for="email">Enter Your Email:
-          <input id="email" name="email" type="email" placeholder="j.smith@email.com" required /></label>
-        <br>
-        <label for="question">How long have you had your pet?
-          <input id="question" name="question" type="text" required /></label>
-        <br>
-        <label for="dropdown" id="pet-type">select pet</label>
-        <select id="dropdown">
-          <option value="cat">Cat</option>
-          <option value="dog">Dog</option>
-          <option value="rodent">Rodent</option>
-          <option value="lizard">Lizard</option>
-          <option value="fish">Fish</option>
-          <option value="other/multiple species">Other or multiple species</option>
-        </select>
-        <label for="specify" id="specify"></label>
-        <input id="specify" type="text" name="specify" placeholder="if other/more specify..." required>
-        <br>
-        <br>
-        <label for="food-type" id="food-type"> What type of <b>food</b> does your pet prefer?</label>
-        <br>
-        <input for="food-type" type="radio" id="wet-food" name="food-type" value="wet-food">
-        <label id="food-type" for="wet-food">Wet Food</label>
-        <br>
-        <input for="food-type" type="radio" id="dry-food" name="food-type" value="dry-food">
-        <label id="food-type" for="dry-food">Dry Food</label>
-        <br>
-        <input for="food-type" type="radio" id="live-food" name="food-type" value="live-food">
-        <label id="food-type" for="live-food">Live Food</label>
-        <br>
-        <input for="food-type" type="radio" id="organic/raw-food" name="food-type" value="organic/raw-food">
-        <label id="food-type" for="organic/raw-food">Organic/Raw Food</label>
-        <br>
-        <input for="food-type" type="radio" id="Human-food" name="food-type" value="Human-food">
-        <label id="food-type" for="Human-food">Human Food</label>
-        <br>
-        <br>
-        <label for="pet-mood">Pet <b>Mood</b> Overall</label>
-        <br>
-        <input id="checkbox" type="checkbox" name="pet-mood" label="very-happy" value="very-happy">
-        <label for="checkbox">Very Happy</label>
-        <br>
-        <input id="checkbox" type="checkbox" name="pet-mood" label="somewhat-happy" value="somewhat-happy">
-        <label for="checkbox">Somewhat Happy</label>
-        <br>
-        <input id="checkbox" type="checkbox" name="pet-mood" label="happy" value="happy">
-        <label for="checkbox">Happy</label>
-        <br>
-        <input id="checkbox" type="checkbox" name="pet-mood" label="meh" value="meh">
-        <label for="checkbox">Meh</label>
-        <br>
-        <input id="checkbox" type="checkbox" name="pet-mood" label="sad" value="sad">
-        <label for="checkbox">Sad</label>
-        <br>
-        <input id="checkbox" type="checkbox" name="pet-mood" label="somewhat-sad" value="somewhat-sad">
-        <label for="checkbox">Somewhat Sad</label>
-        <br>
-        <input id="checkbox" type="checkbox" name="pet-mood" label="very-sad" value="very-sad">
-        <label for="checkbox">Very Sad</label>
-        <br>
-        <br>
-        <label id="unique-id">Tell us, in your opinion. why you made this choice; by providing us with an example:</label>
-        <br>
-        <textarea id="textarea" name="tell-us-more" rows="5" cols="40" title="Tell us more about your pet" placeholder="Please provide more details about your pet"></textarea>
-        <br>
-        <input id="submit" type="submit" value="submit"/>
-      </fieldset>
-    </form>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pet Survey</title>
+  <link href="./projects/Html Css/tribute_page.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <h1 id="title">Pet Survey</h1>
+  <p id="description">Please fill out this form with the required information</p>
+  <form id="survey-form" method="post" action='https://register-demo.freecodecamp.org'>
+    <fieldset>
+      <label id="name-label" for="name">Enter Your Full Name:
+        <input id="name" name="name" type="text" placeholder="John Smith" required /></label>
+      <br>
+      <label id="number-label" for="age">Input your age (years):
+        <input id="number" type="number" name="age" min="13" max="120" placeholder="13" /></label>
+      <br>
+      <label id="email-label" for="email">Enter Your Email:
+        <input id="email" name="email" type="email" placeholder="j.smith@email.com" required /></label>
+      <br>
+      <label for="question">How long have you had your pet?
+        <input id="question" name="question" type="text" required /></label>
+      <br>
+      <label for="dropdown" id="pet-type">select pet</label>
+      <select id="dropdown">
+        <option value="cat">Cat</option>
+        <option value="dog">Dog</option>
+        <option value="rodent">Rodent</option>
+        <option value="lizard">Lizard</option>
+        <option value="fish">Fish</option>
+        <option value="other/multiple species">Other or multiple species</option>
+      </select>
+      <label for="specify" id="specify"></label>
+      <input id="specify" type="text" name="specify" placeholder="if other/more specify..." required>
+      <br>
+      <br>
+      <label for="food-type" id="food-type"> What type of <b>food</b> does your pet prefer?</label>
+      <br>
+      <input for="food-type" type="radio" id="wet-food" name="food-type" value="wet-food">
+      <label id="food-type" for="wet-food">Wet Food</label>
+      <br>
+      <input for="food-type" type="radio" id="dry-food" name="food-type" value="dry-food">
+      <label id="food-type" for="dry-food">Dry Food</label>
+      <br>
+      <input for="food-type" type="radio" id="live-food" name="food-type" value="live-food">
+      <label id="food-type" for="live-food">Live Food</label>
+      <br>
+      <input for="food-type" type="radio" id="organic/raw-food" name="food-type" value="organic/raw-food">
+      <label id="food-type" for="organic/raw-food">Organic/Raw Food</label>
+      <br>
+      <input for="food-type" type="radio" id="Human-food" name="food-type" value="Human-food">
+      <label id="food-type" for="Human-food">Human Food</label>
+      <br>
+      <br>
+      <label for="pet-mood">Pet <b>Mood</b> Overall</label>
+      <br>
+      <input id="checkbox" type="checkbox" name="pet-mood" label="very-happy" value="very-happy">
+      <label for="checkbox">Very Happy</label>
+      <br>
+      <input id="checkbox" type="checkbox" name="pet-mood" label="somewhat-happy" value="somewhat-happy">
+      <label for="checkbox">Somewhat Happy</label>
+      <br>
+      <input id="checkbox" type="checkbox" name="pet-mood" label="happy" value="happy">
+      <label for="checkbox">Happy</label>
+      <br>
+      <input id="checkbox" type="checkbox" name="pet-mood" label="meh" value="meh">
+      <label for="checkbox">Meh</label>
+      <br>
+      <input id="checkbox" type="checkbox" name="pet-mood" label="sad" value="sad">
+      <label for="checkbox">Sad</label>
+      <br>
+      <input id="checkbox" type="checkbox" name="pet-mood" label="somewhat-sad" value="somewhat-sad">
+      <label for="checkbox">Somewhat Sad</label>
+      <br>
+      <input id="checkbox" type="checkbox" name="pet-mood" label="very-sad" value="very-sad">
+      <label for="checkbox">Very Sad</label>
+      <br>
+      <br>
+      <label id="unique-id">Tell us, in your opinion. why you made this choice; by providing us with an example:</label>
+      <br>
+      <textarea id="textarea" name="tell-us-more" rows="5" cols="40" title="Tell us more about your pet"
+        placeholder="Please provide more details about your pet"></textarea>
+      <br>
+      <input id="submit" type="submit" value="submit" />
+    </fieldset>
+  </form>
+</body>
+
 </html>
