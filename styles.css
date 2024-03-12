@@ -5910,12 +5910,31 @@ textarea {
     }
 }
 
+    .card {
+        flex: 1;
+        margin-right: 20px; /* Add space between cards */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .card:last-child {
+        margin-right: 0; /* Remove margin from last card */
+    }
+    .card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
 .card-container {
     background-color: #fff;
     padding: 2rem 5rem;
     position: relative;
     width: 80%;
-    margin: -10em auto 20px
+    margin: -10em auto 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 @media (max-width:992px) {
