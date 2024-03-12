@@ -132,7 +132,7 @@ samp {
     font-size: 1em
 }
 .hero-full-container {
-    background-image: url('/home/chrisd/Desktop/GithubPortfolio/assets/space.jpg');
+    background-image: url('./assets/space.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
