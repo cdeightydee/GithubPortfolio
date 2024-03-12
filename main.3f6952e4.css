@@ -5693,6 +5693,9 @@ body.minimal {
     vertical-align: middle;
     display: table-cell
 }
+.hero-full-container {
+  background-image: url('./assets/space.jpg');
+}
 
 .white-text-container h1,
 .white-text-container h2,
