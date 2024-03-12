@@ -1,0 +1,30 @@
+#tribute-info {
+    background: grey;
+}
+#tribute-info p {
+    line-height: 2;
+}
+body {
+    background: lightgrey;
+}
+
+#title {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#subtitle {
+    text-align:center;
+    font-style: italic;
+}
+
+#img-caption {
+    font-style:italic;
+    margin-top: 0;
+    text-align: center;
+
+}
+
+#quote {
+    font-style: italic;
+}
