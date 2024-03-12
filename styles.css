@@ -293,17 +293,17 @@ th {
 
     .table {
         border-collapse: collapse !important
-        width: 30%;
-        margin: 0 auto;
+        float: left; /* Float tables side by side */
+        margin-right: 10px; /* Add space between tables */
     }
     .table-container {
     display: flex;
     justify-content: space-around;
     }
     th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: center;
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
     }
     .table td,
     .table th {
