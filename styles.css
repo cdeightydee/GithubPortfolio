@@ -133,7 +133,6 @@ samp {
 }
 .hero-full-container {
     background-image: url(./assets/space.jpg);
-    background-size: cover;
     background-repeat: no-repeat;
 }
 button,
