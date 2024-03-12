@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palindrome Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      max-width: 400px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      width: calc(100% - 80px);
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 80px;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">
+      <h2>Welcome to the Palindrome Checker!</h2>
+    </div>
+    <input type="text" id="text-input">
+    <button id="check-btn">Check</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const textInput = document.getElementById('text-input');
+    const checkBtn = document.getElementById('check-btn');
+    const resultDiv = document.getElementById('result');
+
+    function isPalindrome(str) {
+      const cleanStr = str.toLowerCase().replace(/[^a-zA-Z0-9]/g, '');
+      const reversedStr = cleanStr.split('').reverse().join('');
+      return cleanStr === reversedStr;
+    }
+
+    checkBtn.addEventListener('click', () => {
+      const inputValue = textInput.value.trim();
+      if (!inputValue) {
+        alert('Please input a value');
+        return;
+      }
+
+      if (isPalindrome(inputValue)) {
+        resultDiv.textContent = `${inputValue} is a palindrome`;
+      } else {
+        resultDiv.textContent = `${inputValue} is not a palindrome`;
+      }
+    });
+  </script>
+</body>
+</html>
