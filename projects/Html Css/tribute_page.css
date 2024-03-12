@@ -1,9 +1,11 @@
 #tribute-info {
     background: grey;
 }
+
 #tribute-info p {
     line-height: 2;
 }
+
 body {
     background: lightgrey;
 }
@@ -14,12 +16,12 @@ body {
 }
 
 #subtitle {
-    text-align:center;
+    text-align: center;
     font-style: italic;
 }
 
 #img-caption {
-    font-style:italic;
+    font-style: italic;
     margin-top: 0;
     text-align: center;
 

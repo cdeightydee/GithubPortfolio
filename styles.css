@@ -121,9 +121,12 @@ hr {
 pre {
     overflow: auto
 }
+
 .navbar {
-    font-weight: bold; /* Adjust the value as needed */
+    font-weight: bold;
+    /* Adjust the value as needed */
 }
+
 code,
 kbd,
 pre,
@@ -131,10 +134,12 @@ samp {
     font-family: monospace, monospace;
     font-size: 1em
 }
+
 .hero-full-container {
     background-image: url(./assets/space.jpg);
     background-repeat: no-repeat;
 }
+
 button,
 input,
 optgroup,
