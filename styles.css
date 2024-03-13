@@ -91,7 +91,7 @@ section {
 
 .social-links a {
     display: inline-block; /* Display links as inline-block elements */
-    margin: 0 10px; /* Add spacing between links */
+    margin: 0 30px; /* Add spacing between links */
     color: #fff; /* Set link text color to white */
     text-decoration: none; /* Remove underlines from links */
 }
