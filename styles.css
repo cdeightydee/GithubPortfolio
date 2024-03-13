@@ -49,9 +49,7 @@ header p {
 
 nav {
     text-align: center;
-    margin-top: 2%; /* Relative margin */    display: flex;
-    flex-wrap: wrap; /* Allow navigation links to wrap to a new line if necessary */
-    justify-content: center; /* Center navigation links horizontally */
+    margin-top: 2%; /* Relative margin */
 }
 
 nav a {
