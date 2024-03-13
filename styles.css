@@ -923,6 +923,16 @@ th {
         overflow-y: scroll
     }
 
+    .content {
+        /* Set a fixed height for the content area */
+        height: 100vh;
+        /* 100% of the viewport height */
+        overflow-y: scroll;
+        /* Enable vertical scrolling */
+        padding: 20px;
+        /* Add padding for better readability */
+    }
+
     .container {
         margin-right: auto;
         margin-left: auto;
@@ -6212,7 +6222,8 @@ th {
     .list-icons li {
         float: left;
         margin-right: 5px;
-.hero-full-container {
-    background-image: url(./assets/space.jpg);
-    background-repeat: no-repeat;
-}
+
+        .hero-full-container {
+            background-image: url(./assets/space.jpg);
+            background-repeat: no-repeat;
+        }
