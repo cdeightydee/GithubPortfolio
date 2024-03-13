@@ -6,22 +6,10 @@ body {
     background-repeat: no-repeat;
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
-    font-family: Arial, sans-serif; /* Use a more common font for better compatibility */
+    font-family: 'Arial', sans-serif; /* Use a more common font for better compatibility */
 }
 
-h2, h1 {
-    color: rgb(127, 214, 255);
-}
-
-h3 {
-    color: rgb(127, 214, 255);
-}
-
-p {
-    color: rgb(127, 214, 255);
-}
-
-label {
+h1, h2, h3, p, label {
     color: rgb(127, 214, 255);
 }
 
@@ -31,14 +19,11 @@ header {
     text-align: center;
 }
 
-div h1 {
-    color: #ffffff;
-}
-
 header h1 {
     color: #fff; /* White */
     margin: 1% 0; /* Relative margin */
     font-size: 2em; /* Relative font size */
+    font-family: 'Roboto', sans-serif; /* Add a cooler font */
 }
 
 header p {
@@ -49,7 +34,8 @@ header p {
 
 nav {
     text-align: center;
-    margin-top: 2%; /* Relative margin */    display: flex;
+    margin-top: 2%; /* Relative margin */
+    display: flex;
     flex-wrap: wrap; /* Allow navigation links to wrap to a new line if necessary */
     justify-content: center; /* Center navigation links horizontally */
 }
@@ -81,11 +67,7 @@ section {
     text-align: center;
     padding: 5% 0; /* Relative padding */
 }
-.social-links img {
-    width: 50px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0 10px; /* Add spacing between icons */
-}
+
 .social-links {
     text-align: center; /* Align the links to the center */
     margin-top: 20px; /* Add some top margin */
@@ -93,7 +75,7 @@ section {
 
 .social-links a {
     display: inline-block; /* Display links as inline-block elements */
-    margin: 0 0px; /* Add spacing between links */
+    margin: 0 10px; /* Add spacing between links */
     color: #fff; /* Set link text color to white */
     text-decoration: none; /* Remove underlines from links */
 }
@@ -102,7 +84,7 @@ section {
     color: #ccc; /* Change link color on hover */
 }
 
-* Footer styles */
+/* Footer styles */
 footer {
     text-align: center;
     padding: 2% 0; /* Relative padding */
@@ -110,9 +92,6 @@ footer {
     background-color: rgba(2, 24, 153, 0.5); /* Semi-transparent black background */
 }
 
-nav a {
-    margin: 0 10px; /* Adjust margin between links */
-}
 /* Header styles */
 header {
     text-align: center;
@@ -123,14 +102,15 @@ header {
     color: #ffffff; /* Text color */
     background-color: rgba(13, 59, 145, 0.5); /* Semi-transparent black background */
 }
+
 header h1 {
     font-size: 3.5rem; /* Increase the font size */
     color: #0c3581; /* Change the text color */
     margin-bottom: 10px; /* Add some space below the heading */
     letter-spacing: 2px; /* Add letter spacing */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
+
 header p {
     font-size: 1rem; /* Increase the font size */
     color: #247b96; /* Change the text color */
@@ -194,6 +174,7 @@ body.home .city-skyline {
         margin: 0 3%; /* Relative margin */
     }
 }
+
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -228,27 +209,3 @@ body.home .city-skyline {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.card-overlay:hover {
-    opacity: 1;
-}
-
-.card-label {
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-}
-@media (max-width: 768px) {
-    header {
-        flex-direction: row; /* Change to row layout on smaller screens */
-    }
-}
