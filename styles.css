@@ -1,97 +1,178 @@
+/* General styles */
 body {
     background-image: url('./assets/1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: 'Arial', sans-serif; /* Use a more common font for better compatibility */
 }
 
-h2, h1 {
-    color: rgb(127, 214, 255);
-}
-
-h3 {
-    color: rgb(127, 214, 255);
-}
-
-p {
-    color: rgb(127, 214, 255);
-}
-
-label {
+h1, h2, h3, p, label {
     color: rgb(127, 214, 255);
 }
 
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2% 0;
-    color: #ffffff;
-    background-color: rgba(13, 59, 145, 0.5);
+    background-color: #065972; /* Dark grey */
+    padding: 2%; /* Relative padding */
+    text-align: center;
 }
 
 header h1 {
-    font-size: 3.5rem;
-    color: #0c3581;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    color: #fff; /* White */
+    margin: 1% 0; /* Relative margin */
+    font-size: 2em; /* Relative font size */
+    font-family: 'Roboto', sans-serif; /* Add a cooler font */
 }
 
 header p {
-    font-size: 1rem;
-    color: #247b96;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    color: #ccc; /* Light grey */
+    margin: 1% 0; /* Relative margin */
+    font-size: 2.5em; /* Relative font size */
 }
 
 nav {
+    text-align: center;
+    margin-top: 2%; /* Relative margin */
     display: flex;
-    flex-wrap: nowrap; /* Ensure all links stay on one line */
-    justify-content: center;
-    margin-top: 10px;
+    flex-wrap: wrap; /* Allow navigation links to wrap to a new line if necessary */
+    justify-content: center; /* Center navigation links horizontally */
 }
 
 nav a {
     text-decoration: none;
-    color: #fff;
-    padding: 10px;
-    margin: 0 10px;
-    transition: color 0.3s;
+    color: #fff; /* White */
+    padding: 1%; /* Relative padding */
+    margin: 0 1%; /* Relative margin */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+footer a {
+    color: #77a3db;
+}
+
+footer a:hover {
+    color: #1105dc;
 }
 
 nav a:hover {
     color: rgb(127, 214, 255);
-    text-decoration: none;
-    margin: 0 10px;
-    text-decoration: underline;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.social-icons a {
-    display: inline-block;
-    margin: 0 10px;
-    color: #fff;
-    text-decoration: none;
-}
-
-.social-icons a:hover {
-    color: #ccc;
+    text-decoration: none; /* Remove underline from links */
+    margin: 0 2%; /* Relative margin */
+    text-decoration: underline; /* Add underline on hover */
 }
 
 section {
     text-align: center;
-    padding: 5% 0;
+    padding: 5% 0; /* Relative padding */
+}
+
+.social-links {
+    text-align: center; /* Align the links to the center */
+    margin-top: 20px; /* Add some top margin */
+}
+
+.social-links a {
+    display: inline-block; /* Display links as inline-block elements */
+    margin: 0 10px; /* Add spacing between links */
+    color: #fff; /* Set link text color to white */
+    text-decoration: none; /* Remove underlines from links */
+}
+
+.social-links a:hover {
+    color: #ccc; /* Change link color on hover */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 2% 0; /* Relative padding */
+    color: #fff; /* Text color */
+    background-color: rgba(2, 24, 153, 0.5); /* Semi-transparent black background */
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    padding: 2% 0; /* Relative padding */
+    color: #ffffff; /* Text color */
+    background-color: rgba(13, 59, 145, 0.5); /* Semi-transparent black background */
+}
+
+header h1 {
+    font-size: 3.5rem; /* Increase the font size */
+    color: #0c3581; /* Change the text color */
+    margin-bottom: 10px; /* Add some space below the heading */
+    letter-spacing: 2px; /* Add letter spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+}
+
+header p {
+    font-size: 1rem; /* Increase the font size */
+    color: #247b96; /* Change the text color */
+    margin-bottom: 10px; /* Add some space below the heading */
+    letter-spacing: 2px; /* Add letter spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+}
+
+ol, ul {
+    color: rgb(127, 214, 255);
+}
+
+body.home {
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Set a fallback color */
+    background-image: url(./assets/toronto-skyline.jpg); /* Replace 'path_to_your_image.jpg' with the actual path to your image */
+    background-size: cover; /* Cover ensures the image covers the entire element */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat;
+}
+
+body.home .city-skyline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency by changing the alpha value (0.5 means 50% opacity) */
+    z-index: -1; /* Ensures the skyline is behind other content */
+}
+
+.typing-text {
+    font-style: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Relative height */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.line {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    white-space: nowrap; /* Prevent line breaks */
+    font-size: 3em; /* Relative font size */
+    font-style: bold;
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    header {
+        padding: 5% 0; /* Relative padding */
+    }
+
+    nav a {
+        padding: 3%; /* Relative padding */
+        margin: 0 3%; /* Relative margin */
+    }
+
+    .social-icons a {
+        margin: 0 3%; /* Relative margin */
+    }
 }
 
 .card-container {
@@ -99,28 +180,28 @@ section {
     flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 20px;
-    overflow-x: auto;
-    padding-bottom: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding-bottom: 20px; /* Add padding to prevent cards from being partially hidden */
 }
 
 .card {
     position: relative;
-    width: 200px;
+    width: 200px; /* Adjust card width as needed */
     margin-bottom: 20px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-right: 10px;
+    margin-right: 10px; /* Add margin between cards */
 }
 
 .card:last-child {
-    margin-right: 0;
+    margin-right: 0; /* Remove right margin from the last card */
 }
 
 .card-image {
     width: 100%;
     height: auto;
-    filter: brightness(70%) sepia(50%);
+    filter: brightness(70%) sepia(50%); /* Example: Change brightness and add a sepia effect */
 }
 
 .card-overlay {
@@ -128,37 +209,3 @@ section {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.card-overlay:hover {
-    opacity: 1;
-}
-
-.card-label {
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-@media screen and (max-width: 768px) {
-    header {
-        padding: 5% 0;
-    }
-
-    nav a {
-        padding: 3%;
-        margin: 0 3%;
-    }
-
-    .social-icons a {
-        margin: 0 3%;
-    }
-}
