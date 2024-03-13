@@ -933,6 +933,7 @@ th {
         /* Add padding for better readability */
     }
 
+
     .container {
         margin-right: auto;
         margin-left: auto;
@@ -5678,9 +5679,12 @@ th {
         bottom: 0
     }
 
+}
     body {
-        padding: 10px;
-        min-height: 100vh
+        padding: 0;
+        min-height: 100vh;
+        margin: 0;
+
     }
 
     body.minimal {
