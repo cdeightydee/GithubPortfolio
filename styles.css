@@ -80,7 +80,6 @@ nav a:hover {
 
 .social-icons a {
     display: inline-block;
-    width: 50px; /* Fixed width for icon */
     margin: 0 10px;
     color: #fff;
     text-decoration: none;
