@@ -80,6 +80,7 @@ nav a:hover {
 
 .social-icons a {
     display: inline-block;
+    width: 50px; /* Fixed width for icon */
     margin: 0 10px;
     color: #fff;
     text-decoration: none;
@@ -153,16 +154,12 @@ section {
         padding: 5% 0;
     }
 
-    nav {
-        flex-wrap: wrap; /* Allow links to wrap to a new line if necessary */
-    }
-
     nav a {
-        padding: 10px; /* Adjust padding for smaller screens */
-        margin: 5px; /* Adjust margin for smaller screens */
+        padding: 3%;
+        margin: 0 3%;
     }
 
     .social-icons a {
-        margin: 0 5px; /* Adjust margin for smaller screens */
+        margin: 0 3%;
     }
 }
