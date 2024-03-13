@@ -247,4 +247,8 @@ body.home .city-skyline {
     font-weight: bold;
     text-align: center;
 }
-
+@media (max-width: 768px) {
+    header {
+        flex-direction: row; /* Change to row layout on smaller screens */
+    }
+}
