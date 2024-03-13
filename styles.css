@@ -5908,6 +5908,34 @@ textarea {
     .address-container {
         margin-top: 20px
     }
+        body, html {
+        overflow: auto; /* Allow scrolling if content exceeds viewport height */
+        margin: 0;
+        padding: 0;
+    }
+    .card-container {
+        display: flex;
+        justify-content: space-between;
+        overflow-x: auto; /* Allow horizontal scrolling if cards overflow */
+        padding: 20px; /* Add padding to prevent content from sticking to edges */
+    }
+    .card {
+        flex: 1;
+        margin-right: 20px; /* Add space between cards */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        box-sizing: border-box;
+        max-width: 300px; /* Limit card width */
+    }
+    .card:last-child {
+        margin-right: 0; /* Remove margin from last card */
+    }
+    .card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
 }
 
     .card {
