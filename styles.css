@@ -80,14 +80,23 @@ section {
     padding: 5% 0; /* Relative padding */
 }
 
-.social-icons a {
-    margin: 0 2%; /* Relative margin */
-    color: #fff; /* Icon color */
-    font-size: 2em; /* Relative font size */
-    text-decoration: none;
+.social-links {
+    text-align: center; /* Align the links to the center */
+    margin-top: 20px; /* Add some top margin */
 }
 
-/* Footer styles */
+.social-links a {
+    display: inline-block; /* Display links as inline-block elements */
+    margin: 0 10px; /* Add spacing between links */
+    color: #fff; /* Set link text color to white */
+    text-decoration: none; /* Remove underlines from links */
+}
+
+.social-links a:hover {
+    color: #ccc; /* Change link color on hover */
+}
+
+* Footer styles */
 footer {
     text-align: center;
     padding: 2% 0; /* Relative padding */
