@@ -49,7 +49,9 @@ header p {
 
 nav {
     text-align: center;
-    margin-top: 2%; /* Relative margin */
+    margin-top: 2%; /* Relative margin */    display: flex;
+    flex-wrap: wrap; /* Allow navigation links to wrap to a new line if necessary */
+    justify-content: center; /* Center navigation links horizontally */
 }
 
 nav a {
@@ -108,9 +110,15 @@ footer {
     background-color: rgba(2, 24, 153, 0.5); /* Semi-transparent black background */
 }
 
+nav a {
+    margin: 0 10px; /* Adjust margin between links */
+}
 /* Header styles */
 header {
     text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
     padding: 2% 0; /* Relative padding */
     color: #ffffff; /* Text color */
     background-color: rgba(13, 59, 145, 0.5); /* Semi-transparent black background */
