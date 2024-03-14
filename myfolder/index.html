@@ -3,10 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to my folder</title>
+    <title>Directory Listing</title>
+    <style>
+        /* Add some basic styling for better readability */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff; /* Blue color for links */
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to my folder!</h1>
-    <p>This is a test page.</p>
+    <h1>Directory Listing</h1>
+    <ul id="fileList"></ul>
+
+    <script>
+        // Function to fetch and display the directory contents
+        fetch('/your-directory-path') // Replace '/your-directory-path' with the path to your directory
+            .then(response => response.text())
+            .then(data => {
+                const parser = new DOMParser();
+                const htmlDoc = parser.parseFromString(data, 'text/html');
+                const files = htmlDoc.querySelectorAll('a');
+
+                const fileList = document.getElementById('fileList');
+                files.forEach(file => {
+                    const listItem = document.createElement('li');
+                    const link = document.createElement('a');
+                    link.href = file.href;
+                    link.textContent = file.textContent;
+                    listItem.appendChild(link);
+                    fileList.appendChild(listItem);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching directory contents:', error);
+            });
+    </script>
 </body>
 </html>
+
