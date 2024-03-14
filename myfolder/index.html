@@ -3,52 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directory Listing</title>
-    <style>
-        /* Add some basic styling for better readability */
-        body {
-            font-family: Arial, sans-serif;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            margin-bottom: 5px;
-        }
-        a {
-            text-decoration: none;
-            color: #007bff; /* Blue color for links */
-        }
-    </style>
+    <title>File Listing</title>
 </head>
 <body>
-    <h1>Directory Listing</h1>
-    <ul id="fileList"></ul>
+    <h1>File Listing</h1>
+    <ul>
+        <!-- List of files in the directory -->
+        <?php
+        // Get the list of files in the current directory
+        $files = scandir(__DIR__);
 
-    <script>
-        // Function to fetch and display the directory contents
-        fetch('/your-directory-path') // Replace '/your-directory-path' with the path to your directory
-            .then(response => response.text())
-            .then(data => {
-                const parser = new DOMParser();
-                const htmlDoc = parser.parseFromString(data, 'text/html');
-                const files = htmlDoc.querySelectorAll('a');
-
-                const fileList = document.getElementById('fileList');
-                files.forEach(file => {
-                    const listItem = document.createElement('li');
-                    const link = document.createElement('a');
-                    link.href = file.href;
-                    link.textContent = file.textContent;
-                    listItem.appendChild(link);
-                    fileList.appendChild(listItem);
-                });
-            })
-            .catch(error => {
-                console.error('Error fetching directory contents:', error);
-            });
-    </script>
+        // Loop through the files and display them as list items
+        foreach ($files as $file) {
+            // Exclude current directory (.) and parent directory (..)
+            if ($file != '.' && $file != '..') {
+                echo "<li><a href='$file'>$file</a></li>";
+            }
+        }
+        ?>
+    </ul>
 </body>
 </html>
-
