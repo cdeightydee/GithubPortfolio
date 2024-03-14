@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,8 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: #f4f4f4;
+      background-color: #f8f9fa;
+      /* Soft gray background */
     }
 
     .container {
@@ -22,11 +24,18 @@
       border-radius: 10px;
       background-color: #fff;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      /* Center the content */
     }
 
     .title {
-      text-align: center;
       margin-bottom: 20px;
+      color: #007bff;
+      /* Dark blue color for the title */
+      font-size: 24px;
+      /* Larger font size */
+      text-decoration: underline;
+      /* Underline the title */
     }
 
     input[type="text"] {
@@ -41,7 +50,9 @@
       width: 80px;
       padding: 10px;
       background-color: #007bff;
+      /* Dark blue button */
       color: #fff;
+      /* White text */
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -49,14 +60,18 @@
 
     button:hover {
       background-color: #0056b3;
+      /* Slightly darker blue on hover */
     }
 
     #result {
       margin-top: 20px;
       font-weight: bold;
+      color: #6c757d;
+      /* Dark gray color for the result */
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <div class="title">
@@ -81,7 +96,8 @@
     checkBtn.addEventListener('click', () => {
       const inputValue = textInput.value.trim();
       if (!inputValue) {
-        alert('Please input a value');
+        resultDiv.textContent = 'Please input a value';
+        resultDiv.style.color = '#dc3545'; /* Red color for error message */
         return;
       }
 
@@ -90,7 +106,9 @@
       } else {
         resultDiv.textContent = `${inputValue} is not a palindrome`;
       }
+      resultDiv.style.color = '#6c757d'; /* Dark gray color for result */
     });
   </script>
 </body>
+
 </html>
