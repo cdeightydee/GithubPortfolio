@@ -49,15 +49,24 @@ header p {
 
 nav {
     margin-top: 2%; /* Relative margin */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center the links horizontally */
 }
 
 nav a {
     text-decoration: none;
     color: #fff; /* White */
     padding: 1%; /* Relative padding */
-    margin: 0 1%; /* Relative margin */
+    margin: 0 10px; /* Add margin between links */
     transition: color 0.3s; /* Smooth transition for color change */
 }
+
+nav a:hover {
+    color: rgb(127, 214, 255);
+    text-decoration: none; /* Remove underline from links */
+    text-decoration: underline; /* Add underline on hover */
+}
+
 
 footer a {
     color: #77a3db;
@@ -67,12 +76,6 @@ footer a:hover {
     color: #1105dc;
 }
 
-nav a:hover {
-    color: rgb(127, 214, 255);
-    text-decoration: none; /* Remove underline from links */
-    margin: 0 2%; /* Relative margin */
-    text-decoration: underline; /* Add underline on hover */
-}
 
 section {
     text-align: center;
