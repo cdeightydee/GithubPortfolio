@@ -3,19 +3,198 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta http:equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title id="title">OCCULT BOOKS</title>
-  <link rel="stylesheet" href="./css/product_landing_page.css" />
+  <title>OCCULT BOOKS</title>
+  <link rel="stylesheet" href="./styles.css" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+  <style>
+    :root {
+      --white: hsl(0, 0%, 100%);
+      --text: hsl(228, 12%, 48%);
+      --pale: hsl(32, 37%, 92%);
+      --green: hsl(158, 36%, 37%);
+      --header-text: hsl(212, 21%, 14%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--pale);
+      font-family: Arial, sans-serif;
+    }
+
+    #header-img {
+      width: 50px;
+      object-fit: contain;
+    }
+
+    #nav-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--white);
+      padding: 10px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin-left: auto;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      padding: 0 10px;
+    }
+
+    .the-product {
+      font-size: 24px;
+      margin-left: 10px;
+      font-weight: bold;
+    }
+
+    section {
+      margin: 40px auto;
+      max-width: 800px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: var(--green);
+    }
+
+    p {
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .feature {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .icon {
+      color: var(--green);
+      margin-right: 10px;
+    }
+
+    .product-image {
+      width: 100%;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+    }
+
+    .product1 {
+      background-image: url(https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR42J-li-TIq8S57qDcgJoz1WYGwQQjK5lYPhQsxWWGDWRaWh5iy5gdFCMeOBJIGdPDEHGgyEdG2xbIkxOV-aH0y9NYmSeHLiG0VxWa9VM&usqp=CAE);
+    }
+
+    .product2 {
+      background-image: url(https://m.media-amazon.com/images/I/81Q4I3eCYSL._SL1296_.jpg);
+    }
+
+    .product3 {
+      background-image: url(https://m.media-amazon.com/images/I/91nQElamq0L._SL1500_.jpg)
+    }
+
+    .card {
+      background-color: var(--white);
+      border-radius: 10px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .inner-card {
+      padding: 20px;
+    }
+
+    .content {
+      margin-bottom: 15px;
+    }
+
+    .flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+    .main-price {
+      margin-right: 20px;
+      color: var(--green);
+      font-weight: bold;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: var(--text);
+    }
+
+    .author {
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      color: var(--text);
+    }
+
+    .header {
+      margin: 10px 0;
+      color: var(--header-text);
+    }
+
+    .add {
+      background-color: var(--green);
+      color: var(--white);
+      cursor: pointer;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    @media screen and (min-width: 600px) {
+      .nav-links {
+        margin-left: initial;
+      }
+
+      .nav-links a {
+        padding: 0 20px;
+      }
+
+      .the-product {
+        font-size: 36px;
+      }
+
+      .product-image {
+        height: 400px;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <header id="header">
     <nav id="nav-bar">
       <div class="logo-container">
-        <img src="https://qph.cf2.quoracdn.net/main-qimg-6602261587a51840d11a73368679fa67-lq" alt="pentagram"
-          class="header-img" />
+        <img src="https://qph.cf2.quoracdn.net/main-qimg-6602261587a51840d11a73368679fa67-lq" alt="pentagram" width="50"
+          id="header-img" />
         <span class="the-product">Occult Books</span>
       </div>
       <ul class="nav-links">
@@ -34,25 +213,27 @@
   </section>
   <section id="features">
     <div class="feature">
-      <i class="ri-star-fill ri=4x icon"></i>
+      <i class="ri-star-fill ri icon"></i>
     </div>
     <h2>Rare and Odd Content</h2>
-    <p>We Specialize in the Rareness and Oddity of life, making solving the mystery a captivating Art form</p>
+    <p>We specialize in the rareness and oddity of life, making unraveling mysteries a captivating art form.</p>
     <div class="feature">
-      <i class="ri-magic-line  ri=4x icon"></i>
+      <i class="ri-magic-line ri icon"></i>
     </div>
     <h2>Discover Magic</h2>
-    <p>We have a collection of thousands of old and rare books full of ancient and forbidden knowledge</p>
+    <p>Explore our collection of thousands of old and rare books filled with ancient and forbidden knowledge.</p>
     <div class="feature">
-      <i class="ri-sparkling-line  ri=4x icon"></i>
+      <i class="ri-sparkling-line ri icon"></i>
     </div>
-    <h2>Take charge of your Karma</h2>
-    <p>Find new and creative ways of dealing with the negative energy that is disrupting our natural flow towards
-      positivity</p>
+    <h2>Take Charge of Your Karma</h2>
+    <p>Find new and creative ways to deal with negative energy and restore our natural flow towards positivity.</p>
   </section>
-  <section id="audio"><iframe id="video" height="400" src="https://www.youtube.com/embed/Etz2Kgtev5w"
-      title="YouTube video player" frameborder="0" sandbox="allow-scripts" allowfullscreen>
-    </iframe></section>
+  <section id="audio">
+    <iframe id="video" width="100%" height="400" src="https://www.youtube.com/embed/Etz2Kgtev5w"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+  </section>
   <section id="for_sale">
     <h2>For Sale</h2>
     <div class="product-cards">
@@ -60,54 +241,48 @@
         <div class="product-image product1"></div>
         <div class="inner-card">
           <div class="author">Diane. J. Lockheart</div>
-          <h1 class="header">WITCHCRAFT FOR BEGINNERS</h1>
-          <p class="content">A Basic Guide For Modern Witches To Find Their Own Path And Start Practicing To Learn
-            Spells And Magic Rituals Using Esoteric And Occult Elements Like Herbs And Crystals</p>
+          <h1 class="header">Witchcraft for Beginners</h1>
+          <p class="content">A basic guide for modern witches to find their own path and start practicing spells and
+            magic rituals using esoteric and occult elements like herbs and crystals.</p>
           <div class="flex">
             <p class="main-price">$23.97</p>
             <p class="old-price">$29.99</p>
           </div>
-          <button class="add">
-            Add to Cart
-          </button>
+          <button class="add">Add to Cart</button>
         </div>
-        <div class="card">
-          <div class="product-image product2"></div>
-          <div class="inner-card">
-            <div class="author">John Michael Greer </div>
-            <h1 class="header">The Occult Book: A Chronological Journey from Alchemy to Wicca</h1>
-            <p class="content"> Explore the occult from ancient times to the modern day with one of its most respected
-              scholars and practitioners. Take an enlightening journey through occult history, exploring 100 dramatic
-              incidents, arcane knowledge, and key historical figures from around the world. John Michael Greer delves
-              into two millennia of tradition, from the earliest alchemists to pagan rituals; from the Philosopher`s
-              Stone to Cabala, the first tarot, and the Knights Templar; and from the first horoscopes to
-              fortune-telling trials and the birth of modern witchcraft, or Wicca. Each entry features a stunning image
-              or intriguing item of ephemera.</p>
-            <div class="flex">
-              <p class="main-price">$23.06</p>
-              <p class="old-price">$29.99</p>
-            </div>
-            <button class="add">
-              Add to Cart
-            </button>
+      </div>
+      <div class="card">
+        <div class="product-image product2"></div>
+        <div class="inner-card">
+          <div class="author">John Michael Greer</div>
+          <h1 class="header">The Occult Book: A Chronological Journey from Alchemy to Wicca</h1>
+          <p class="content">Explore the occult from ancient times to the modern day with one of its most respected
+            scholars and practitioners. Take an enlightening journey through occult history, exploring 100 dramatic
+            incidents, arcane knowledge, and key historical figures from around the world.</p>
+          <div class="flex">
+            <p class="main-price">$23.06</p>
+            <p class="old-price">$29.99</p>
           </div>
-          <div class="card">
-            <div class="product-image product3"></div>
-            <div class="inner-card">
-              <div class="author">Zolar</div>
-              <h1 class="header">Encyclopedia of Ancient and Forbidden Knowledge</h1>
-              <p class="content"> The ancient and secret wisdom of the world is encapsulated in this reference work. It
-                covers astrology, numerology, the tarot, palmistry and many more age-old techniques. The author also
-                shows how to chart and interpret your own horoscope.</p>
-              <div class="flex">
-                <p class="main-price">$24.69</p>
-                <p class="old-price">$29.99</p>
-              </div>
-              <button class="add">
-                Add to Cart
-              </button>
-            </div>
+          <button class="add">Add to Cart</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="product-image product3"></div>
+        <div class="inner-card">
+          <div class="author">Zolar</div>
+          <h1 class="header">Encyclopedia of Ancient and Forbidden Knowledge</h1>
+          <p class="content">The ancient and secret wisdom of the world is encapsulated in this reference work. It
+            covers astrology, numerology, the tarot, palmistry and many more age-old techniques.</p>
+          <div class="flex">
+            <p class="main-price">$24.69</p>
+            <p class="old-price">$29.99</p>
+          </div>
+          <button class="add">Add to Cart</button>
+        </div>
+      </div>
+    </div>
   </section>
+
 </body>
 
 </html>

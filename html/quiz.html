@@ -6,7 +6,152 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="freeCodeCamp Accessibility Quiz practice project" />
   <title>Accessibility Quiz</title>
-  <link rel="stylesheet" href="./css/quiz.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f7;
+      color: #0b1b32;
+    }
+
+    header {
+      background-color: #0b1b32;
+      color: #f0be32;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #logo {
+      max-width: 99px;
+      height: auto;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+    }
+
+    nav ul li:last-child {
+      margin-right: 0;
+    }
+
+    nav ul li a {
+      color: #dfdfe1;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    main {
+      padding-top: 70px;
+      padding-bottom: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-size: 24px;
+      border-bottom: 3px solid #dfdfe2;
+      padding-bottom: 10px;
+    }
+
+    .info,
+    .question-block {
+      margin-bottom: 20px;
+    }
+
+    .info label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+
+    .info input,
+    .info select,
+    .info textarea {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .question-block p {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .question-block label {
+      display: block;
+      font-size: 18px;
+    }
+
+    .question-block select,
+    .question-block textarea {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .question-block select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='%230b1b32'%3E%3Cpath d='M7.406 9.594L12 14.188l4.594-4.594L18 11l-6 6-6-6 1.406-1.406zM6 3v2H3c-.553 0-1 .447-1 1v14c0 .553.447 1 1 1h14c.553 0 1-.447 1-1v-3h2v3c0 1.654-1.346 3-3 3H3c-1.654 0-3-1.346-3-3V6c0-1.654 1.346-3 3-3h3zm13.354 5.646c.195.195.195.512 0 .707l-7 7c-.195.195-.512.195-.707 0l-7-7c-.195-.195-.195-.512 0-.707.195-.195.512-.195.707 0L12 12.293l6.646-6.647c.195-.195.512-.195.707 0z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      padding-right: 30px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      margin-top: 20px;
+      font-size: 20px;
+      color: #fff;
+      background-color: #0b1b32;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1a2a40;
+    }
+
+    footer {
+      background-color: #1a2a40;
+      color: #dfdfe1;
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    footer a {
+      color: #f0be32;
+      text-decoration: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -27,97 +172,62 @@
         <h2 id="student-info">Student Info</h2>
         <div class="info">
           <label for="student-name">Name:</label>
-          <input type="text" name="student-name" id="student-name" />
+          <input type="text" name="student-name" id="student-name" required />
         </div>
         <div class="info">
           <label for="student-email">Email:</label>
-          <input type="email" name="student-email" id="student-email" />
+          <input type="email" name="student-email" id="student-email" required />
         </div>
         <div class="info">
-          <label for="birth-date">D.O.B.<span class="sr-only">(Date of Birth)</span></label>
-          <input type="date" name="birth-date" id="birth-date" />
+          <label for="birth-date">Date of Birth:</label>
+          <input type="date" name="birth-date" id="birth-date" required />
         </div>
       </section>
       <section role="region" aria-labelledby="html-questions">
         <h2 id="html-questions">HTML</h2>
         <div class="question-block">
-          <p>1</p>
-          <fieldset class="question" name="html-question-one">
-            <legend>
-              The legend element represents a caption for the content of its
-              parent fieldset element
-            </legend>
+          <p>1. The legend element represents a caption for the content of its parent fieldset element.</p>
+          <fieldset class="question">
+            <legend><label for="q1">True or False:</label></legend>
             <ul class="answers-list">
-              <li>
-                <label for="q1-a1">
-                  <input type="radio" id="q1-a1" name="q1" value="true" />
-                  True
-                </label>
-              </li>
-              <li>
-                <label for="q1-a2">
-                  <input type="radio" id="q1-a2" name="q1" value="false" />
-                  False
-                </label>
-              </li>
+              <li><input type="radio" id="q1-a1" name="q1" value="true" required /><label for="q1-a1">True</label></li>
+              <li><input type="radio" id="q1-a2" name="q1" value="false" required /><label for="q1-a2">False</label></li>
             </ul>
           </fieldset>
         </div>
         <div class="question-block">
-          <p>2</p>
-          <fieldset class="question" name="html-question-two">
-            <legend>
-              A label element nesting an input element is required to have a
-              for attribute with the same value as the input's id
-            </legend>
+          <p>2. A label element nesting an input element is required to have a for attribute with the same value as the input's id.</p>
+          <fieldset class="question">
+            <legend><label for="q2">True or False:</label></legend>
             <ul class="answers-list">
-              <li>
-                <label for="q2-a1">
-                  <input type="radio" id="q2-a1" name="q2" value="true" />
-                  True
-                </label>
-              </li>
-              <li>
-                <label for="q2-a2">
-                  <input type="radio" id="q2-a2" name="q2" value="false" />
-                  False
-                </label>
-              </li>
+              <li><input type="radio" id="q2-a1" name="q2" value="true" required /><label for="q2-a1">True</label></li>
+              <li><input type="radio" id="q2-a2" name="q2" value="false" required /><label for="q2-a2">False</label></li>
             </ul>
           </fieldset>
         </div>
       </section>
       <section role="region" aria-labelledby="css-questions">
         <h2 id="css-questions">CSS</h2>
-        <div class="formrow">
-          <div class="question-block">
-            <label for="selector">Can the CSS margin property accept negative values?</label>
-          </div>
-          <div class="answer">
-            <select name="selector" id="selector" required>
-              <option value="">Select an option</option>
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-            </select>
-          </div>
-          <div class="question-block">
-            <label for="css-textarea">Do you have any questions:</label>
-          </div>
-          <div class="answer">
-            <textarea id="css-textarea" name="css-questions" rows="5" cols="24"
-              placeholder="Who is flexbox..."></textarea>
-          </div>
+        <div class="question-block">
+          <label for="css-margin">Can the CSS margin property accept negative values?</label>
+          <select name="css-margin" id="css-margin" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <div class="question-block">
+          <label for="css-textarea">Do you have any questions?</label>
+          <textarea id="css-textarea" name="css-questions" rows="5" placeholder="Enter your question here..."></textarea>
         </div>
       </section>
-      <button type="submit">Send</button>
+      <button type="submit">Submit</button>
     </form>
   </main>
   <footer>
     <address>
       <a href="https://freecodecamp.org">freeCodeCamp</a><br />
-      San Francisco<br />
-      California<br />
-      USA
+      San Francisco, California, USA
     </address>
   </footer>
 </body>

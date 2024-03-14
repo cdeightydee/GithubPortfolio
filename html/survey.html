@@ -6,27 +6,134 @@
   <title>Pet Survey</title>
   <link href="./css/tribute_page.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      background-color: #1b1b32;
+      color: #f5f6f7;
+      font-family: Tahoma, Arial, sans-serif;
+      font-size: 16px;
+    }
+
+    h1,
+    p {
+      margin: 1em auto;
+      text-align: center;
+    }
+
+    form {
+      width: 90%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding-bottom: 2em;
+      background-color: #36364a;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    fieldset {
+      border: none;
+      padding: 1rem 0;
+      border-bottom: 3px solid #3b3b4f;
+    }
+
+    legend {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    input,
+    textarea,
+    select {
+      margin: 10px 0;
+      width: calc(100% - 20px);
+      padding: 8px;
+      border: 1px solid #0a0a23;
+      border-radius: 5px;
+      background-color: #0a0a23;
+      color: #ffffff;
+    }
+
+    select {
+      width: 100%;
+    }
+
+    input[type="submit"] {
+      display: block;
+      width: 50%;
+      margin: 1em auto;
+      padding: 10px;
+      font-size: 1.1rem;
+      background-color: #3b3b4f;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #57576d;
+    }
+
+    .pet-mood-label {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .pet-mood-checkbox {
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
+    .choice-box {
+      border: 2px solid #3b3b4f;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .food-choice-label {
+      font-style: italic;
+      margin-top: 5px;
+    }
+
+    #description {
+      font-size: 1.1rem;
+    }
+  </style>
 </head>
 
 <body>
   <h1 id="title">Pet Survey</h1>
-  <p id="description">Please fill out this form with the required information</p>
+  <p id="description">Help us understand your furry friend better! Please fill out this form with the required information.</p>
   <form id="survey-form" method="post" action='https://register-demo.freecodecamp.org'>
     <fieldset>
-      <label id="name-label" for="name">Enter Your Full Name:
-        <input id="name" name="name" type="text" placeholder="John Smith" required /></label>
-      <br>
-      <label id="number-label" for="age">Input your age (years):
-        <input id="number" type="number" name="age" min="13" max="120" placeholder="13" /></label>
-      <br>
-      <label id="email-label" for="email">Enter Your Email:
-        <input id="email" name="email" type="email" placeholder="j.smith@email.com" required /></label>
-      <br>
-      <label for="question">How long have you had your pet?
-        <input id="question" name="question" type="text" required /></label>
-      <br>
-      <label for="dropdown" id="pet-type">select pet</label>
-      <select id="dropdown">
+      <legend>Personal Information</legend>
+      <label for="name">Full Name:</label>
+      <input id="name" name="name" type="text" placeholder="Enter your full name" required />
+
+      <label for="age">Age:</label>
+      <input id="age" type="number" name="age" min="13" max="120" placeholder="Your age (in years)" required />
+
+      <label for="email">Email:</label>
+      <input id="email" name="email" type="email" placeholder="Enter your email address" required />
+    </fieldset>
+
+    <fieldset>
+      <legend>Pet Information</legend>
+      <label for="question">How long have you had your pet?</label>
+      <input id="question" name="question" type="text" placeholder="Enter duration of pet ownership" required />
+
+      <label for="pet-type">Select Pet:</label>
+      <select id="pet-type">
         <option value="cat">Cat</option>
         <option value="dog">Dog</option>
         <option value="rodent">Rodent</option>
@@ -34,60 +141,61 @@
         <option value="fish">Fish</option>
         <option value="other/multiple species">Other or multiple species</option>
       </select>
-      <label for="specify" id="specify"></label>
-      <input id="specify" type="text" name="specify" placeholder="if other/more specify..." required>
-      <br>
-      <br>
-      <label for="food-type" id="food-type"> What type of <b>food</b> does your pet prefer?</label>
-      <br>
-      <input for="food-type" type="radio" id="wet-food" name="food-type" value="wet-food">
-      <label id="food-type" for="wet-food">Wet Food</label>
-      <br>
-      <input for="food-type" type="radio" id="dry-food" name="food-type" value="dry-food">
-      <label id="food-type" for="dry-food">Dry Food</label>
-      <br>
-      <input for="food-type" type="radio" id="live-food" name="food-type" value="live-food">
-      <label id="food-type" for="live-food">Live Food</label>
-      <br>
-      <input for="food-type" type="radio" id="organic/raw-food" name="food-type" value="organic/raw-food">
-      <label id="food-type" for="organic/raw-food">Organic/Raw Food</label>
-      <br>
-      <input for="food-type" type="radio" id="Human-food" name="food-type" value="Human-food">
-      <label id="food-type" for="Human-food">Human Food</label>
-      <br>
-      <br>
-      <label for="pet-mood">Pet <b>Mood</b> Overall</label>
-      <br>
-      <input id="checkbox" type="checkbox" name="pet-mood" label="very-happy" value="very-happy">
-      <label for="checkbox">Very Happy</label>
-      <br>
-      <input id="checkbox" type="checkbox" name="pet-mood" label="somewhat-happy" value="somewhat-happy">
-      <label for="checkbox">Somewhat Happy</label>
-      <br>
-      <input id="checkbox" type="checkbox" name="pet-mood" label="happy" value="happy">
-      <label for="checkbox">Happy</label>
-      <br>
-      <input id="checkbox" type="checkbox" name="pet-mood" label="meh" value="meh">
-      <label for="checkbox">Meh</label>
-      <br>
-      <input id="checkbox" type="checkbox" name="pet-mood" label="sad" value="sad">
-      <label for="checkbox">Sad</label>
-      <br>
-      <input id="checkbox" type="checkbox" name="pet-mood" label="somewhat-sad" value="somewhat-sad">
-      <label for="checkbox">Somewhat Sad</label>
-      <br>
-      <input id="checkbox" type="checkbox" name="pet-mood" label="very-sad" value="very-sad">
-      <label for="checkbox">Very Sad</label>
-      <br>
-      <br>
-      <label id="unique-id">Tell us, in your opinion. why you made this choice; by providing us with an example:</label>
-      <br>
-      <textarea id="textarea" name="tell-us-more" rows="5" cols="40" title="Tell us more about your pet"
-        placeholder="Please provide more details about your pet"></textarea>
-      <br>
-      <input id="submit" type="submit" value="submit" />
+      <label for="specify">If other or multiple, please specify:</label>
+      <input id="specify" type="text" name="specify" placeholder="Specify your pet type" required />
+
+      <div class="choice-box">
+        <legend>Preferred Food</legend>
+        <input type="radio" id="wet-food" name="food-type" value="wet-food">
+        <label for="wet-food">Wet Food</label>
+        <br>
+        <input type="radio" id="dry-food" name="food-type" value="dry-food">
+        <label for="dry-food">Dry Food</label>
+        <br>
+        <input type="radio" id="live-food" name="food-type" value="live-food">
+        <label for="live-food">Live Food</label>
+        <br>
+        <input type="radio" id="organic-raw-food" name="food-type" value="organic-raw-food">
+        <label for="organic-raw-food">Organic/Raw Food</label>
+        <br>
+        <input type="radio" id="human-food" name="food-type" value="human-food">
+        <label for="human-food">Human Food</label>
+      </div>
+
+      <div class="choice-box">
+        <legend>Pet Mood</legend>
+        <input type="checkbox" id="very-happy" name="pet-mood" value="very-happy" class="pet-mood-checkbox">
+        <label for="very-happy" class="pet-mood-label">Very Happy</label>
+        <br>
+        <input type="checkbox" id="somewhat-happy" name="pet-mood" value="somewhat-happy" class="pet-mood-checkbox">
+        <label for="somewhat-happy" class="pet-mood-label">Somewhat Happy</label>
+        <br>
+        <input type="checkbox" id="happy" name="pet-mood" value="happy" class="pet-mood-checkbox">
+        <label for="happy" class="pet-mood-label">Happy</label>
+        <br>
+        <input type="checkbox" id="meh" name="pet-mood" value="meh" class="pet-mood-checkbox">
+        <label for="meh" class="pet-mood-label">Meh</label>
+        <br>
+        <input type="checkbox" id="sad" name="pet-mood" value="sad" class="pet-mood-checkbox">
+        <label for="sad" class="pet-mood-label">Sad</label>
+        <br>
+        <input type="checkbox" id="somewhat-sad" name="pet-mood" value="somewhat-sad" class="pet-mood-checkbox">
+        <label for="somewhat-sad" class="pet-mood-label">Somewhat Sad</label>
+        <br>
+        <input type="checkbox" id="very-sad" name="pet-mood" value="very-sad" class="pet-mood-checkbox">
+        <label for="very-sad" class="pet-mood-label">Very Sad</label>
+      </div>
     </fieldset>
+
+    <fieldset>
+      <legend>Tell Us More</legend>
+      <label for="tell-us-more">Share Your Experience:</label>
+      <textarea id="tell-us-more" name="tell-us-more" rows="5" placeholder="Tell us more about your pet's behavior and preferences"></textarea>
+    </fieldset>
+
+    <input id="submit" type="submit" value="Submit" />
   </form>
 </body>
 
 </html>
+

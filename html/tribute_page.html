@@ -4,44 +4,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<title>A Tribute To Tux (Linux)</title>
-<link rel="stylesheet" href="./css/tribute_page.css">
-<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <title>A Tribute To Tux (Linux)</title>
+  <link rel="stylesheet" href="./css/tribute_page.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    #title {
+      text-align: center;
+      font-size: 2.5em;
+      color: #333;
+      margin-top: 50px;
+    }
+
+    #subtitle {
+      text-align: center;
+      font-style: italic;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    #main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #img-div {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    #img-caption {
+      font-style: italic;
+      color: #777;
+      margin-top: 10px;
+    }
+
+    #tribute-info {
+      color: #333;
+    }
+
+    #tribute-info p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    #tribute-info a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    #outro {
+      font-style: italic;
+      color: #666;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 
 <body>
-  <h1 id="title">Tux (Linux mascot)</h1>
-  <h2 id="subtitle">Tux, the coolest little dude</h2>
-  <main id="main">
+  <h1 id="title">A Tribute To Tux (Linux)</h1>
+  <h2 id="subtitle">Tux, the Coolest Penguin in the Open Source World</h2>
+  <div id="main">
     <div id="img-div">
       <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/265px-Tux.svg.png"
         alt="Picture of Tux, the Linux mascot" title="Tux, the Linux mascot">
-      <div id="img-caption"><b>Tux,</b> originally drawn as a raster image by Larry Ewing in 1996</div>
-      <div id="content">
-        <div id="tribute-info">
-          <p>Tux is a penguin character and the official brand character of the Linux kernel.[1] Originally created as
-            an entry to a Linux logo competition, To read a more in depth look at Tux (linux) check out his <a
-              href="https://en.wikipedia.org/wiki/Tux_(mascot)" target="_blank" rel="noopener">Wikipedia Page</a></p>
-          <p>Tux is the most commonly used icon for Linux, although different Linux distributions depict Tux in various
-            styles. The character is used in many other Linux programs and as a general symbol of Linux.</p>
-          <p>The concept of the Linux brand character being a penguin came from Linus Torvalds, the creator of Linux.
-          </p>
-          <p>According to Jeff Ayers, Linus Torvalds had a "fixation for flightless, fat waterfowl" and Torvalds claims
-            to have contracted "penguinitis" after being nibbled by a little penguin on a visit to the National Zoo &
-            Aquarium in Canberra, Australia, joking that the disease "makes you stay awake at nights just thinking about
-            penguins and feeling great love towards them."</p>
-          <p>Tux has taken on a role in the Linux community similar to that which Mario holds in the Nintendo
-            community.[23] The character has been featured in open-source look-alikes of other mainstream games, such as
-            Tux Racer, Extreme Tux Racer, SuperTux, SuperTuxKart, and Tux Paint</p>
-        </div>
-        <div id="outro">
-          Tux has taken on a role in the Linux community similar to that which Mario holds in the Nintendo
-          community.[23] The character has been featured in open-source look-alikes of other mainstream games, such as
-          Tux Racer, Extreme Tux Racer, SuperTux, SuperTuxKart, and Tux Paint
-        </div>
+      <div id="img-caption"><b>Tux,</b> originally drawn by Larry Ewing in 1996</div>
+    </div>
+    <div id="content">
+      <div id="tribute-info">
+        <p>Tux is the official mascot of the Linux kernel. Originally created by Larry Ewing as an entry for a Linux logo competition, Tux quickly became the most widely recognized symbol of the Linux operating system.</p>
+        <p>The concept of the Linux brand character being a penguin came from Linus Torvalds, the creator of Linux. According to Torvalds, he contracted "penguinitis" after being nibbled by a penguin on a visit to the National Zoo & Aquarium in Canberra, Australia.</p>
+        <p>Linus Torvalds chose a penguin as the mascot because of his fondness for these flightless birds. Tux represents the spirit of open-source software and the community-driven development of the Linux operating system.</p>
+        <p>Over the years, Tux has become more than just a mascot; he is a beloved figure in the open-source world. Tux has appeared in various Linux distributions and has even starred in his own open-source games such as Tux Racer and SuperTux.</p>
+        <p>Tux has taken on a role in the Linux community similar to that which Mario holds in the Nintendo community. The character has been featured in open-source look-alikes of other mainstream games, such as Tux Kart and Tux Paint.</p>
+        <p>To learn more about Tux and his significance in the Linux community, you can visit his <a href="https://en.wikipedia.org/wiki/Tux_(mascot)" target="_blank"
+            rel="noopener">Wikipedia page</a>.</p>
       </div>
-  </main>
+      <div id="outro">
+        Whether you're a Linux enthusiast or just a fan of cute penguins, Tux holds a special place in the hearts of many.
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
