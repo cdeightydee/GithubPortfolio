@@ -128,11 +128,21 @@ header {
 header h1 {
     font-size: 4.5rem; /* Increase the font size */
     color: #3865b9; /* Change the text color */
-    margin-bottom: 10px; /* Add some space below the heading */
+    margin-bottom: 0px; /* Add some space below the heading */
     letter-spacing: 2px; /* Add letter spacing */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), -2px -2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle contour shadow */
     font-family: 'CustomFont', sans-serif; /* Use the custom font followed by a fallback font */
     font-weight: 700; /* Make the text even bolder (700 is typically considered bold) */
+}
+header h2 {
+        font-size: 2.5rem; /* Increase the font size */
+    color: #3865b9; /* Change the text color */
+    margin-bottom: 0px; /* Add some space below the heading */
+    margin-bottom: 10px;
+    letter-spacing: 2px; /* Add letter spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), -2px -2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle contour shadow */
+    font-family: 'CustomFont', sans-serif; /* Use the custom font followed by a fallback font */
+    font-weight: 700;
 }
 header p {
     font-size: 1rem; /* Increase the font size */
