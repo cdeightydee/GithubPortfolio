@@ -256,3 +256,19 @@ body.home .city-skyline {
     src: url('./assets/Sacramento-Regular.ttf') format('woff2'), /* Modern Browsers */
          url('./assets/Sacramento-Regular.ttf') format('woff'); /* Older Browsers */
 }
+
+@media screen and (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    header {
+        padding: 5% 0; /* Relative padding */
+    }
+
+    nav a {
+        padding: 3%; /* Relative padding */
+        margin: 0 3%; /* Relative margin */
+    }
+
+    .social-icons a {
+        margin: 0 3%; /* Relative margin */
+    }
+}
