@@ -56,9 +56,11 @@ nav {
 nav a {
     text-decoration: none;
     color: #3865b9; /* Change the text color */
-    padding: 1%; /* Relative padding */
+    padding: 1.5% 2%; /* Adjusted padding for better spacing */
     margin: 0 10px; /* Add margin between links */
     transition: color 0.3s; /* Smooth transition for color change */
+    font-weight: 700; /* Make the text even bolder (700 is typically considered bold) */
+    font-size: 1.1rem; /* Increase the font size */
 }
 
 nav a:hover {
