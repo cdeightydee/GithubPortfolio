@@ -129,7 +129,8 @@ header h1 {
     margin-bottom: 10px; /* Add some space below the heading */
     letter-spacing: 2px; /* Add letter spacing */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family: 'CustomFont', sans-serif; /* Use the custom font followed by a fallback font */
+
 }
 header p {
     font-size: 1rem; /* Increase the font size */
@@ -252,7 +253,4 @@ body.home .city-skyline {
     font-family: 'CustomFont';
     src: url('./assets/Sacramento-Regular.ttf') format('woff2'), /* Modern Browsers */
          url('./assets/Sacramento-Regular.ttf') format('woff'); /* Older Browsers */
-}
-h1 {
-  font-family: 'CustomFont', sans-serif; /* Use the custom font followed by a fallback font */
 }
