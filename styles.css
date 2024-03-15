@@ -55,7 +55,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #fff; /* White */
+    color: #3865b9; /* Change the text color */
     padding: 1%; /* Relative padding */
     margin: 0 10px; /* Add margin between links */
     transition: color 0.3s; /* Smooth transition for color change */
@@ -121,16 +121,16 @@ header {
     align-items: center;
     padding: 2% 0; /* Relative padding */
     color: #ffffff; /* Text color */
-    background-color: rgba(51, 93, 172, 0.5); /* Semi-transparent black background */
+    background-color: rgba(13, 59, 145, 0.5); /* Semi-transparent black background */
 }
 header h1 {
-    font-size: 3.5rem; /* Increase the font size */
-    color: #0c3581; /* Change the text color */
+    font-size: 4.5rem; /* Increase the font size */
+    color: #3865b9; /* Change the text color */
     margin-bottom: 10px; /* Add some space below the heading */
     letter-spacing: 2px; /* Add letter spacing */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), -2px -2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle contour shadow */
     font-family: 'CustomFont', sans-serif; /* Use the custom font followed by a fallback font */
-
+    font-weight: 700; /* Make the text even bolder (700 is typically considered bold) */
 }
 header p {
     font-size: 1rem; /* Increase the font size */
