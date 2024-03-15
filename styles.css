@@ -248,3 +248,11 @@ body.home .city-skyline {
     text-align: center;
 }
 
+@font-face {
+    font-family: 'CustomFont';
+    src: url('./assets/Sacramento-Regular.ttf') format('woff2'), /* Modern Browsers */
+         url('./assets/Sacramento-Regular.ttf') format('woff'); /* Older Browsers */
+}
+h1 {
+  font-family: 'CustomFont', sans-serif; /* Use the custom font followed by a fallback font */
+}
