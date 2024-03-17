@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.box {
+    border: 1px solid #4caf50;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: flex-start; /* Align items to the start */
+    background-color: #f9f9f9;
+}
+
+.box img {
+    max-height: 30px; /* Adjust the maximum height of the images */
+    max-width: 30px; /* Adjust the maximum width of the images */
+    margin-right: 10px; /* Add some space between the image and text */
+}
+
+.see-more img {
+    max-height: 30px; /* Adjust the maximum height of the images */
+    max-width: 30px; /* Adjust the maximum width of the images */
+    margin-right: 10px;
+}
+
+.box p {
+    margin: 0; /* Remove default margin for paragraphs */
+}
+
+.hidden-content {
+    display: none;
+}
+
+.see-more {
+    cursor: pointer;
+    margin-top: 10px;
+    position: relative;
+}
+
+
+/* Header styles */
+header {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo img {
+    max-height: 200px; /* Increase the maximum height of the logo */
+    max-width: 200px; /* Increase the maximum width of the logo */
+    margin-right: 150px; /* Push the logo and the following elements to the left */
+}
+
+.search-bar {
+    display: flex;
+    margin-left: -100px;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+    flex: 1; /* Fill remaining space */
+}
+
+.search-bar button[type="submit"] {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #4caf50;
+    border: 1px solid #4caf50;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.icons {
+    display: flex;
+    margin-right: 20px;
+}
+
+.icon-box {
+    padding: 10px;
+    margin-left: auto;
+}
+
+.icons img {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+.icons img:hover {
+    color: #043c00;
+    box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.5),
+        0px 2px 4px rgba(0, 0, 0, 0.1),
+        0px 4px 8px rgba(0, 0, 0, 0.1),
+        0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Main content container */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 75px; /* Adjusted to match header height */
+    padding-bottom: 50px; /* Adjusted for footer */
+    min-height: 100vh;
+}
+
+.post-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    width: 90%; /* Adjusted for better responsiveness */
+    margin-top: 20px; /* Added margin for spacing */
+}
+
+.post {
+    border: 2px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px; /* Increased margin for spacing */
+    width: 100%; /* Added to ensure full width */
+    box-sizing: border-box; /* Ensures padding is included in width calculation */
+}
+
+.post-content {
+    text-align: center; /* Center post content */
+}
+
+.post-textarea {
+    height: 200px; /* Increased height */
+    width: 100%;
+    margin-bottom: 10px;
+    resize: vertical;
+    box-sizing: border-box;
+    padding: 10px; /* Added padding */
+}
+
+.post-button {
+    background-color: #62e266;
+    width: 100px;
+    margin-top: 10px; /* Added margin for spacing */
+}
+
+/* Footer styles */
+footer {
+    background-color: #4caf50;img
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Sidebar styles */
+.left-sidebar {
+    position: fixed;
+    top: 100px; /* Adjusted to start from the top of the page */
+    left: 0; /* Posilit-logo.pngtioned at the left side of the page */
+    width: 200px;
+    height: calc(100vh - 75px);
+    background-color: #f0f0f0;
+    overflow-y: auto;
+}
+
+.sidebar-right {
+    position: fixed;
+    top: 100px; /* Adjusted to match the height of the header */
+    right: 0;
+    width: 200px; /* Adjust the width as needed */
+    height: calc(100vh - 75px); /* Make the sidebar height equal to the viewport height minus header height */
+    background-color: #f0f0f0; /* Background color of the right sidebar */
+    overflow-y: auto; /* Make the sidebar scrollable */
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px; /* Adjusted margin */
+}
+
+.profile-info {
+    margin-bottom: 20px;
+}
+
+.profile-info h2 {
+    margin-bottom: 5px;
+}
+
+.profile-info p {
+    margin: 0;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 5px;
+    }
+
+    .logo img {
+        max-height: 70px; /* Increase the maximum height of the logo */
+        max-width: 70px; /* Increase the maximum width of the logo */
+        margin-right: 150px; /* Push the logo and the following elements to the left */
+    }
+
+    .search-bar {
+        margin-left: 10px; /* Adjusted margin */
+    }
+
+    .icons {
+        margin-right: 10px; /* Adjusted margin */
+    }
+
+    .post-section {
+        width: 95%; /* Adjusted width */
+    }
+
+    .sidebar {
+        display: none; /* Hide sidebar on smaller screens */
+    }
+}
+
+.green-break-line {
+    border: none;
+    border-top: 5px solid #4caf50; /* Green border top */
+    margin: 10px 0; /* Add margin to separate from other elements */
+}
+
+h5 {
+    size-adjust: 10px;
+    font-size: medium;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    border: 1px solid #4caf50;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Align items vertically */
+    background-color: #f9f9f9;
+}
+
+.button-img {
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    cursor: pointer;
+    align-self: flex-end; /* Align the icon to the bottom right */
+}
+
+.hidden-content {
+    display: none;
+    margin-top: 10px; /* Add some space between button and hidden content */
+}
+
+.hidden-content p {
+    margin: 0; /* Remove default margins for paragraphs */
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.box {
+    position: relative; /* Add position relative to make absolute positioning work */
+}
+
+.button-img {
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    cursor: pointer;
+    position: absolute; /* Position the button absolutely */
+    top: 10px; /* Adjust the top position as needed */
+    left: 10px; /* Adjust the left position as needed */
+}
+
+.hidden-content {
+    display: none;
+    margin-top: 30px; /* Adjust margin-top to create space between button and hidden content */
+}
