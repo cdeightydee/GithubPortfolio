@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lit Book</title>
+
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+.box {
+    border: 1px solid #4caf50;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Align items vertically */
+    background-color: #f9f9f9;
+}
+
+.box img {
+    max-height: 30px; /* Adjust the maximum height of the images */
+    max-width: 30px; /* Adjust the maximum width of the images */
+    margin-right: 10px; /* Add some space between the image and text */
+}
+
+.box p {
+    margin: 0; /* Remove default margin for paragraphs */
+}
+
+        /* Header styles */
+        header {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo img {
+            max-height: 200px; /* Increase the maximum height of the logo */
+            max-width: 200px; /* Increase the maximum width of the logo */
+            margin-right: 150px; /* Push the logo and the following elements to the left */
+}
+
+        .search-bar {
+            display: flex;
+            margin-left: -100px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-right: 5px;
+            flex: 1; /* Fill remaining space */
+        }
+
+        .search-bar button[type="submit"] {
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #4caf50;
+            border: 1px solid #4caf50;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .icons {
+            display: flex;
+            margin-right: 20px;
+        }
+
+        .icon-box {
+            padding: 10px;
+            margin-left: auto;
+        }
+
+        .icons img {
+            width: 30px;
+            height: 30px;
+            margin-right: 15px;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+        .icons img:hover {
+            color: #043c00;
+            box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.5),
+                0px 2px 4px rgba(0, 0, 0, 0.1),
+                0px 4px 8px rgba(0, 0, 0, 0.1),
+                0px 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Main content container */
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 75px; /* Adjusted to match header height */
+            padding-bottom: 50px; /* Adjusted for footer */
+            min-height: 100vh;
+        }
+
+        .post-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 600px;
+            width: 90%; /* Adjusted for better responsiveness */
+            margin-top: 20px; /* Added margin for spacing */
+        }
+
+        .post {
+            border: 2px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px; /* Increased margin for spacing */
+            width: 100%; /* Added to ensure full width */
+            box-sizing: border-box; /* Ensures padding is included in width calculation */
+        }
+
+        .post-content {
+            text-align: center; /* Center post content */
+        }
+
+        .post-textarea {
+            height: 200px; /* Increased height */
+            width: 100%;
+            margin-bottom: 10px;
+            resize: vertical;
+            box-sizing: border-box;
+            padding: 10px; /* Added padding */
+        }
+
+        .post-button {
+            background-color: #62e266;
+            width: 100px;
+            margin-top: 10px; /* Added margin for spacing */
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Sidebar styles */
+        .left-sidebar {
+            position: fixed;
+            top: 100px; /* Adjusted to start from the top of the page */
+            left: 0; /* Posilit-logo.pngtioned at the left side of the page */
+            width: 200px;
+            height: calc(100vh - 75px);
+            background-color: #f0f0f0;
+            overflow-y: auto;
+        }
+
+        .sidebar-right {
+            position: fixed;
+            top: 100px; /* Adjusted to match the height of the header */
+            right: 0;
+            width: 200px; /* Adjust the width as needed */
+            height: calc(100vh - 75px); /* Make the sidebar height equal to the viewport height minus header height */
+            background-color: #f0f0f0; /* Background color of the right sidebar */
+            overflow-y: auto; /* Make the sidebar scrollable */
+}
+
+        .profile-pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px; /* Adjusted margin */
+        }
+
+        .profile-info {
+            margin-bottom: 20px;
+        }
+
+        .profile-info h2 {
+            margin-bottom: 5px;
+        }
+
+        .profile-info p {
+            margin: 0;
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 768px) {
+            header {
+                padding: 5px;
+            }
+
+            .logo img {
+                max-height: 70px; /* Increase the maximum height of the logo */
+                max-width: 70px; /* Increase the maximum width of the logo */
+                margin-right: 150px; /* Push the logo and the following elements to the left */
+            }
+
+            .search-bar {
+                margin-left: 10px; /* Adjusted margin */
+            }
+
+            .icons {
+                margin-right: 10px; /* Adjusted margin */
+            }
+
+            .post-section {
+                width: 95%; /* Adjusted width */
+            }
+
+            .sidebar {
+                display: none; /* Hide sidebar on smaller screens */
+            }
+        }
+        .green-break-line {
+            border: none;
+            border-top: 5px solid #4caf50; /* Green border top */
+            margin: 10px 0; /* Add margin to separate from other elements */
+        }
+        h5 {
+            size-adjust: 10px;
+            font-size: medium;
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="./assets/logo-no-background.png" alt="Logo">
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button type="submit">Search</button>
+    </div>
+    <div class="icons">
+        <div class="icon-box">
+            <img src="./assets/house.png" alt="Home">
+        </div>
+    <div class="icon-box">
+            <img src="./assets/newspaper.png" alt="Icon 2">
+        </div>
+    <div class="icon-box">
+            <img src="./assets/music.png" alt="Icon 3">
+        </div>
+    <div class="icon-box">
+            <img src="./assets/video.png" alt="Icon 4">
+        </div>
+    <div class="icon-box">
+        <img src="./assets/pictures.png" alt="Icon 5">
+        </div>
+    <div class="icon-box">
+            <img src="./assets/menu.png" alt="Icon 6">
+        </div>
+    <div class="icon-box">
+        <img src="./assets/square.png" alt="Icon 7">
+        </div>
+    <div class="icon-box">
+            <img src="./assets/notification.png" alt="Notifications">
+        </div>
+        <div class="icon-box">
+            <img src="./assets/message.png" alt="Messages">
+        </div>
+    </div>
+    
+</header>
+
+<div class="main-content">
+    <div class="post-section">
+        <div class="post">
+            <textarea class="post-textarea" placeholder="Write your post..."></textarea>
+            <button class="post-button" type="button">Post</button>
+        </div>
+
+        <div class="post">
+            <div class="post-content">
+                <h2>
+                    <div class="box">
+                <img class="profile-pic" src="./assets/profiles/bong_ripper.png" alt="Bong Ripper">
+                <p>Bong Ripper</p>
+            </div><h5>Man, this music is like a time machine back to the days when everything was chill and the vibes were groovy. Haven't felt this stoked since I was a young bud, just soaking in the tunes and feeling the good vibes flow. Pure nostalgia, dude.</h5>
+            <p><iframe src="https://archive.org/embed/old_skool_vids_part_1" width="580" height="370" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+</p>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-content">
+                <h2>Post Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et commodo nisi.</p>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-content">
+                <h2>Post Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et commodo nisi.</p>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-content">
+                <h2>Post Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et commodo nisi.</p>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-content">
+                <h2>Post Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et commodo nisi.</p>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-content">
+                <h2>Post Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et commodo nisi.</p>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-content">
+                <h2>Post Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et commodo nisi.</p>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-content">
+                <h2>Post Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et commodo nisi.</p>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-content">
+                <h2>Post Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et commodo nisi.</p>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-content">
+                <h2>Post Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et commodo nisi.</p>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-content">
+                <h2>Post Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et commodo nisi.</p>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-content">
+                <h2>Post Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et commodo nisi.</p>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-content">
+                <h2>Post Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et commodo nisi.</p>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-content">
+                <h2>Post Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et commodo nisi.</p>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-content">
+                <h2>Post Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et commodo nisi.</p>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-content">
+                <h2>Post Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et commodo nisi.</p>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-content">
+                <h2>Post Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et commodo nisi.</p>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-content">
+                <h2>Post Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et commodo nisi.</p>
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-content">
+                <h2>Post Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et commodo nisi.</p>
+            </div>
+            <div class="post">
+            <div class="post-content">
+                <h2>Post Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et commodo nisi.</p>
+            </div>
+        </div>
+        </div>
+        <!-- More posts can be added here -->
+    </div>
+</div>
+
+<div class="left-sidebar">
+                <div class="box">
+                    <img class="profile-pic" src="./assets/profiles/profile.jpg" alt="Topher">
+                    <p>Topher Tokington</p>
+                </div>
+                    <div class="stacked-boxes">
+                <div class="box">
+                    <img src="./assets/contacts.png" alt="friend">Friends</div>
+                <div class="box">
+                    <img src="./assets/clock.png" alt="memories">Memories</div>
+                <div class="box">
+                    <img src="./assets/bookmark.png" alt="saved">Saved</div>
+                <div class="box">
+                    <img src="./assets/groups.png" alt="group">Groups</div>
+                <div class="box">
+                    <img src="./assets/videos.png" alt="video">Video</div>
+                <div class="box">
+                    <img src="./assets/more.png" alt="see-more">See More</div>
+                <hr class="green-break-line"> <!-- Green break line -->
+                <div class="label">
+                    <p>Shortcuts</p> <!-- Label for the shortcuts --></div>
+                <div class="box">
+                    <img src="./assets/joint.png" alt="Joint">Smoke Joint</div>
+                <div class="box">
+                    <img src="./assets/bong.png" alt="bong">Smoke Bong</div>
+                <div class="box">
+                    <img src="./assets/smoke.png" alt="pipe">Smoke Pipe</div>
+                <div class="box">
+                    <img src="./assets/piano.png" alt="piano">Play Piano</div>
+                <div class="box">
+                    <img src="./assets/guitar.png" alt="guitar">Play Guitar</div>
+                <div class="box">
+                    <img src="./assets/microphone.png" alt="sing">Sing</div>
+                <div class="box">
+                    <img src="./assets/more.png" alt="see more">See More</div>
+            </div>
+    </div>
+
+<div class="sidebar-right" id="sidebar-right">
+    <!-- Content for the right sidebar will be inserted here -->
+        <div class="stacked-boxes">
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/blaze_leafington_profile_pic.png" alt="Blaze Leafington">
+                <p>Blaze Leafington</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/mary_jane_mcbong_profile_pic.png" alt="Mary-Jane McBong">
+                <p>Mary-Jane McBong</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/stony_mchigh.png" alt="Stony McHigh">
+                <p>Stony McHigh</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/bud_blaze.png" alt="Bud Blaze">
+                <p>Bud Blaze</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/dank_dabington.png" alt="Dank Dabbington">
+                <p>Dank Dabbington</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/chronic_clouds.png" alt="Chronic Cloud">
+                <p>Chronic Cloud</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/puff_smokestone.png" alt="Puff Smokestone">
+                <p>Puff Smokestone</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/Kush Kieferson.png" alt="Kush Kieferson">
+                <p>Kush Kieferson</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/spliff_stonington.png" alt="Spliff Stonington">
+                <p>Spliff Stonington</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/ganja_greenfield.png" alt="Ganja Greenfield">
+                <p>Ganja Greenfield</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/bong_ripper.png" alt="Bong Ripper">
+                <p>Bong Ripper</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/skunky_mcloud.png" alt="Skunky McCloud">
+                <p>Skunky McCloud</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/reefer-ryder.png" alt="Reefer Ryder">
+                <p>Reefer Ryder</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/high_roller.png" alt="High Roller">
+                <p>High Roller</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/herbie_haze.png" alt="Herb Haze">
+                <p>Herb Haze</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/thc_thomson.png" alt="THC Thompson">
+                <p>THC Thompson</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/weed_whacker.png" alt="Weed Whacker">
+                <p>Weed Whacker</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/blunt_butler.png" alt="Blunt Butler">
+                <p>Blunt Butler</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/dab_dude.png" alt="Dab Dude">
+                <p>Dab Dude</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/ziggy_zong.png" alt="Ziggy Zong">
+                <p>Ziggy Zong</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/cheech_chongson__597510344.png" alt="Cheech Chongson">
+                <p>Cheech Chongson</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/toke-toker.png" alt="Toke Toker">
+                <p>Toke Toker</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/sticy_situation.png" alt="Sticky Situations">
+                <p>Sticky Situations</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/pete_pot_pufferson__3225003059.png" alt="Pot Pufferson">
+                <p>Pot Pufferson</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/bud_blazington__1135717666.png" alt="Bud Blazeington">
+                <p>Bud Blazeington</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/blaze_bongington.png" alt="Blaze Bongington">
+                <p>Blaze Bongington</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/stoner_stardust__3304215868.png" alt="Stoner Stardust">
+                <p>Stoner Stardust</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/dank_dude__529047003(1).png" alt="Dank Dude">
+                <p>Dank Dude</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/herb_harrelson.png" alt="Herb Harrelson">
+                <p>Herb Harrelson</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/kush_kawalski.png" alt="Kush Kowalski">
+                <p>Kush Kowalski</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/chronic_cloudburst.png" alt="Chronic Cloudburst">
+                <p>Chronic Cloudburst</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/bud_burner.png" alt="Bud Burner">
+                <p>Bud Burner</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/puffington.png" alt="Puff Puffington">
+                <p>Puff Puffington</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/joint_jameson.png" alt="Joint Jamison">
+                <p>Joint Jamison</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/mcpot.png" alt="Smokey McPot">
+                <p>Smokey McPot</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/reefer_rocker.png" alt="Reefer Rocker">
+                <p>Reefer Rocker</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/baked-baker.png" alt="Baked Baker">
+                <p>Baked Baker</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/leafy leonardo.png" alt="Leafy Leonardo">
+                <p>Leafy Leonardo</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/thc.png" alt="THC Terry">
+                <p>THC Terry</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/soner_strudel.png" alt="Stoner Strudel">
+                <p>Stoner Strudel</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/weed_wizard__591942835.png" alt="Weed Wizard">
+                <p>Weed Wizard</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/blaze_baxter.png" alt="Blaze Baxter">
+                <p>Blaze Baxter</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/stoney_baloney.png" alt="Stony Baloney">
+                <p>Stony Baloney</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/high_hagrid.png" alt="High Hagrid">
+                <p>High Hagrid</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/dank_daze.png" alt="Dank Daze">
+                <p>Dank Daze</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/skunk_skywalker.png" alt="Skunky Skywalker">
+                <p>Skunky Skywalker</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/stoner snachez.png" alt="Stoner Sanchez">
+                <p>Stoner Sanchez</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/chronic_charlie.png" alt="Chronic Charlie">
+                <p>Chronic Charlie</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/puff peterson.png" alt="Puff Peterson">
+                <p>Puff Peterson</p>
+            </div>
+            <div class="box">
+                <img class="profile-pic" src="./assets/profiles/kush_kingston.png" alt="Kush Kingston">
+                <p>Kush Kingston</p>
+            <!-- Add other profile boxes here -->
+</div>
+
+ <!--   <div class="sidebar">
+        <div class="profile-info">
+            <img class="profile-pic" src="profile.jpg" alt="Profile Picture">
+            <div class="profile-details">
+                <h2>John Doe</h2>
+                <p>john.doe@example.com</p>
+            </div>
+        </div>
+        <!-- Additional sidebar content can be added here -->
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Lit Book. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
