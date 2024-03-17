@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lit Book</title>
+<style>
+    header {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%; /* Ensure header spans full width */
+}
+header img {
+    max-width: 100%;
+    height: auto;
+    max-height: 250px; /* Adjusted height */
+}
+.content {
+    padding-top: 290px; /* Adjusted to account for fixed header */
+}
+.login-form {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 300px; /* Adjusted width */
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form button {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-form button {
+    background-color: #fff;
+    color: #4caf50;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #012e03; /* Darker green on hover */
+}
+
+.registration-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.registration-link a {
+    color: #4caf50;
+}
+.post-box {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.post-content {
+    margin-bottom: 10px;
+}
+
+.post-actions button {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.post-actions button:hover {
+    background-color: #f0f0f0;
+}
+
+footer {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+footer p {
+    margin: 0;
+}
+</style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <img src="./png/logo-no-background.png" alt="Lit Book Logo">
+    </div>
+</header>
+
+<section class="content">
+    <div class="container">
+        <div class="login-form">
+            <h2>Login to Lit Book</h2>
+            <form action="newsfeed.html" method="POST">
+                <input type="text" name="email" placeholder="Email" required>
+                <br>
+                <input type="password" name="password" placeholder="Password" required>
+                <br>
+                <button type="submit">Log In</button>
+            </form>
+        </div>
+
+        <div class="registration-link">
+            <p>Don't have an account yet? <a href="registration.html">Register here</a>.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Lit Book. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

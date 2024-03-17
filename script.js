@@ -45,3 +45,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     typeText(); // Start the typing effect
 });
+
