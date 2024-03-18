@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lit Book</title>
+    <link rel="stylesheet" href="litbook.css">
+    <style>
+        header {
+            height: 0.5in;
+            display: flex;
+            justify-content: space-between; /* Adjust spacing between logo and icons */
+            align-items: center;
+        }
+
+        header .container {
+            margin-left: 10px; /* Add margin to push it to the far left */
+        }
+
+        header .container img {
+            width: 2in; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        header .login-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        header .login-icons img {
+            width: 0.5in; /* Adjust width of icons */
+            height: 0.5in; /* Adjust height of icons */
+            margin-left: 10px; /* Add spacing between icons */
+        }
+
+        .sidebar-left {
+            position: fixed;
+            left: 0;
+            top: 20;
+            width: 200px; /* Adjust the width as needed */
+            height: 100vh; /* Make the sidebar height equal to the viewport height */
+            background-color: #f0f0f0; /* Background color of the left sidebar */
+        }
+
+        .sidebar-right {
+            position: fixed;
+            right: 0;
+            top: 10;
+            width: 200px; /* Adjust the width as needed */
+            height: 100vh; /* Make the sidebar height equal to the viewport height */
+            background-color: #f0f0f0; /* Background color of the right sidebar */
+        }
+
+        .main-content {
+            margin-left: 200px; /* Adjust the margin to accommodate the width of the left sidebar */
+            margin-right: 200px; /* Adjust the margin to accommodate the width of the right sidebar */
+            padding: 20px; /* Add padding to create space between the main content and sidebars */
+            min-height: 100vh; /* Ensure the main content takes up the entire viewport height */
+        }
+
+        .post {
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        .sidebar-left,
+.sidebar-right {
+    position: fixed;
+    top: 80px; /* Adjusted to match the height of the header */
+    width: 200px;
+    height: calc(100vh - 50px); /* Adjusted to fit between header and footer */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    background-color: #f0f0f0;
+}
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <a href="litbook.html">
+            <img src="./png/logo-no-background.png" alt="Lit Book Logo">
+        </a>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </div>
+    </div>
+    <div class="login-icons">
+        <img src="./png/house.png" alt="home">
+        <img src="./png/music.png" alt="music">
+        <img src="./png/pictures.png" alt="image">
+        <img src="./png/video.png" alt="video">
+        <img src="./png/newspaper.png" alt="news">
+        <img src="./png/menu.png" alt="menu">
+        <img src="./png/notification.png" alt="notification">
+        <img src="./png/message.png" alt="message">
+    </div>
+</header>
+
+<div class="sidebar-left">
+    <!-- Content for the left sidebar -->
+    Left Sidebar Content
+</div>
+
+<div class="sidebar-right">
+    <!-- Content for the right sidebar -->
+    Right Sidebar Content
+</div>
+
+<div class="container">
+    <!-- Main content area -->
+    <main class="main-content" id="main-content">
+
+</section>          <section id="audio">
+    <div class="post-box">
+    <div class="post-header">
+        <img src="user-avatar.jpg" alt="User Avatar">
+        <span class="username">John Doe</span>
+    </div>
+    <div class="post-content">
+        <p>Dude, this video is blowing my mind! It's like a journey through the cosmos on a psychedelic wave. Pass me the snacks, let's vibe with this for a while!</p>
+        <iframe src="https://archive.org/embed/old_skool_vids_part_1" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+    <div class="post-actions">
+        <button class="like-btn">Like</button>
+        <button class="comment-btn">Comment</button>
+        <button class="share-btn">Share</button>
+    </div>
+</div>
+    <div class="post-box">
+    <div class="post-header">
+        <img src="user-avatar.jpg" alt="User Avatar">
+        <span class="username">John Doe</span>
+    </div>
+    <div class="post-content">
+        <p>This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <iframe src="https://archive.org/embed/dom-120728-flowsbeats" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+    <div class="post-actions">
+        <button class="like-btn">Like</button>
+        <button class="comment-btn">Comment</button>
+        <button class="share-btn">Share</button>
+    </div>
+        <div class="post-content">
+        <p>This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <iframe src="https://redirect.veoh.com/flash/p/2/v81830813cdDqCan7/h81830813.mp4?ct=299eeeca67848be0bdbd14cc301f0954a7870147fb1bfd55" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+    <div class="post-actions">
+        <button class="like-btn">Like</button>
+        <button class="comment-btn">Comment</button>
+        <button class="share-btn">Share</button>
+    </div>
+    <div class="post-content">
+        <p>This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <iframe src="https://redirect.veoh.com/flash/p/2/v81830813cdDqCan7/h81830813.mp4?ct=299eeeca67848be0bdbd14cc301f0954a7870147fb1bfd55" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+    <div class="post-actions">
+        <button class="like-btn">Like</button>
+        <button class="comment-btn">Comment</button>
+        <button class="share-btn">Share</button>
+    </div>
+        <div class="post-content">
+        <p>This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <iframe src="https://archive.org/embed/bobby-brown-music-videos-1" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+    <div class="post-actions">
+        <button class="like-btn">Like</button>
+        <button class="comment-btn">Comment</button>
+        <button class="share-btn">Share</button>
+    </div>
+    <div class="post-content">
+        <p>This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <iframe width="640" height="360" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/82ziQkCmNVj8/"></iframe>
+    </div>
+    <div class="post-actions">
+        <button class="like-btn">Like</button>
+        <button class="comment-btn">Comment</button>
+        <button class="share-btn">Share</button>
+    </div>
+        <div class="post-content">
+        <p>This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <iframe src="https://archive.org/embed/Grateful_Dead_Music_Videos" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+    <div class="post-actions">
+        <button class="like-btn">Like</button>
+        <button class="comment-btn">Comment</button>
+        <button class="share-btn">Share</button>
+    </div>
+        <div class="post-content">
+        <p>This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<iframe src="https://archive.org/embed/KurtCobainTalksMusicVideosHisStomachFrancesBeanMTVNews" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+    <div class="post-actions">
+        <button class="like-btn">Like</button>
+        <button class="comment-btn">Comment</button>
+        <button class="share-btn">Share</button>
+    </div>
+        <div class="post-content">
+        <p>This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <iframe src="https://archive.org/embed/vhs-tape-654-music-63-mtv-various-music-videos-february-25-1992-34th-annual-gram" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+
+    </div>
+    <div class="post-actions">
+        <button class="like-btn">Like</button>
+        <button class="comment-btn">Comment</button>
+        <button class="share-btn">Share</button>
+    </div>
+        <div class="post-content">
+        <p>This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<iframe src="https://archive.org/embed/the-looney-beginning-tiny-toons-pilot" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+    <div class="post-actions">
+        <button class="like-btn">Like</button>
+        <button class="comment-btn">Comment</button>
+        <button class="share-btn">Share</button>
+    </div>
+        <div class="post-content">
+        <p>This is the content of the post. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<iframe src="https://archive.org/embed/s-2-ep-13-no-laughing" width="640" height="480" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen></iframe>
+    </div>
+    <div class="post-actions">
+        <button class="like-btn">Like</button>
+        <button class="comment-btn">Comment</button>
+        <button class="share-btn">Share</button>
+    </div>
+
+
+<!-- Posts will be dynamically loaded here -->
+    </main>
+</div>
+
+<footer>
+    <!-- Footer content -->
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
